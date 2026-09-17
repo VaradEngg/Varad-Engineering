@@ -42,95 +42,95 @@ export default function GalleryPage() {
             </div>
           </nav>
 
-          <div className="mt-8 max-w-3xl">
+          <div className="mt-5 max-w-3xl sm:mt-8">
             <span className="eyebrow">Gallery</span>
-            <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+            <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
               Our products, workshop, machines and inspection facilities
             </h1>
-            <p className="mt-5 text-lg leading-8 text-slate-600">
+            <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">
               A visual look at the broaches, manufacturing setup and inspection facilities at Varad Engineering.
             </p>
           </div>
 
-          <section className="mt-14">
-            <div className="flex items-end justify-between border-b border-slate-200 pb-4">
+          <section className="mt-8 sm:mt-14">
+            <div className="flex items-end justify-between border-b border-slate-200 pb-3 sm:pb-4">
               <div>
                 <p className="section-kicker">Products</p>
-                <h2 className="mt-2 text-3xl font-bold text-slate-900">Broaches & tooling</h2>
+                <h2 className="mt-1.5 text-xl font-bold text-slate-900 sm:mt-2 sm:text-3xl">Broaches &amp; tooling</h2>
               </div>
             </div>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-4 grid gap-3 sm:mt-6 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {productImages.map((image) => (
                 <figure key={image.src} className="group overflow-hidden border border-slate-200 bg-white">
                   <div className="relative aspect-[4/3] bg-slate-100">
                     <Image src={image.src} alt={image.alt} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 25vw" />
                   </div>
-                  <figcaption className="p-4 text-base font-bold text-slate-900">{image.title}</figcaption>
+                  <figcaption className="p-3 text-sm font-bold text-slate-900 sm:p-4 sm:text-base">{image.title}</figcaption>
                 </figure>
               ))}
             </div>
           </section>
 
-          <section className="mt-16">
-            <div className="border-b border-slate-200 pb-4">
+          <section className="mt-8 sm:mt-16">
+            <div className="border-b border-slate-200 pb-3 sm:pb-4">
               <p className="section-kicker">Workshop</p>
-              <h2 className="mt-2 text-3xl font-bold text-slate-900">Manufacturing environment</h2>
+              <h2 className="mt-1.5 text-xl font-bold text-slate-900 sm:mt-2 sm:text-3xl">Manufacturing environment</h2>
             </div>
-            <div className="mt-6 grid gap-5 md:grid-cols-2">
+            <div className="mt-4 grid gap-3 sm:mt-6 sm:gap-5 md:grid-cols-2">
               {workshopImages.map((image) => (
                 <figure key={image.src} className="group overflow-hidden border border-slate-200 bg-white">
                   <div className="relative aspect-[16/9] bg-slate-100">
                     <Image src={image.src} alt={image.alt} fill className="object-cover transition duration-500 group-hover:scale-[1.02]" sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
-                  <figcaption className="p-4 text-base font-bold text-slate-900">{image.title}</figcaption>
+                  <figcaption className="p-3 text-sm font-bold text-slate-900 sm:p-4 sm:text-base">{image.title}</figcaption>
                 </figure>
               ))}
             </div>
           </section>
 
-          <section className="mt-16">
-            <div className="border-b border-slate-200 pb-4">
+          <section className="mt-8 sm:mt-16">
+            <div className="border-b border-slate-200 pb-3 sm:pb-4">
               <p className="section-kicker">Machines</p>
-              <h2 className="mt-2 text-3xl font-bold text-slate-900">Manufacturing equipment</h2>
+              <h2 className="mt-1.5 text-xl font-bold text-slate-900 sm:mt-2 sm:text-3xl">Manufacturing equipment</h2>
             </div>
-            <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-3 sm:mt-6 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
               {machinesList.map((machine) => (
                 <figure key={machine.name} className="overflow-hidden border border-slate-200 bg-white">
-                  <div className="relative h-52 bg-slate-100">
+                  <div className="relative h-40 sm:h-52 bg-slate-100">
                     <Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                   </div>
-                  <figcaption className="p-5">
-                    <p className="text-sm font-bold text-amber-700">{machine.makes}</p>
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">{machine.name}</h3>
+                  <figcaption className="p-4 sm:p-5">
+                    <p className="text-xs font-bold text-amber-700 sm:text-sm">{machine.makes}</p>
+                    <h3 className="mt-1 text-lg font-bold text-slate-900 sm:mt-2 sm:text-xl">{machine.name}</h3>
                   </figcaption>
                 </figure>
               ))}
             </div>
           </section>
 
-          <section className="mt-16">
-            <div className="border-b border-slate-200 pb-4">
-              <p className="section-kicker">Quality & Inspection</p>
-              <h2 className="mt-2 text-3xl font-bold text-slate-900">Inspection equipment</h2>
+          <section className="mt-8 sm:mt-16">
+            <div className="border-b border-slate-200 pb-3 sm:pb-4">
+              <p className="section-kicker">Quality &amp; Inspection</p>
+              <h2 className="mt-1.5 text-xl font-bold text-slate-900 sm:mt-2 sm:text-3xl">Inspection equipment</h2>
             </div>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-3 sm:mt-6 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {inspectionFacilities.map((item) => (
                 <figure key={`${item.name}-${item.spec}`} className="overflow-hidden border border-slate-200 bg-white">
-                  <div className="relative h-52 bg-slate-100">
+                  <div className="relative h-40 sm:h-52 bg-slate-100">
                     <Image src={item.image} alt={`${item.name} at Varad Engineering`} fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
                   </div>
-                  <figcaption className="p-5">
-                    <p className="text-sm font-bold text-amber-700">{item.spec}</p>
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">{item.name}</h3>
+                  <figcaption className="p-4 sm:p-5">
+                    <p className="text-xs font-bold text-amber-700 sm:text-sm">{item.spec}</p>
+                    <h3 className="mt-1 text-lg font-bold text-slate-900 sm:mt-2 sm:text-xl">{item.name}</h3>
                   </figcaption>
                 </figure>
               ))}
             </div>
           </section>
 
-          <div className="mt-16 border-t border-slate-200 pt-8">
-            <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 bg-[#0b4267] px-6 text-base font-bold text-white hover:bg-[#083653]">
-              Discuss a Requirement <ArrowRight className="h-5 w-5" />
+          <div className="mt-8 border-t border-slate-200 pt-6 sm:mt-16 sm:pt-8">
+            <Link href="/contact" className="inline-flex min-h-11 items-center gap-2 bg-[#0b4267] px-5 text-sm font-bold text-white hover:bg-[#083653] sm:min-h-12 sm:px-6 sm:text-base">
+              Discuss a Requirement <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
           </div>
         </div>

@@ -34,17 +34,17 @@ export default function ContactPage() {
           </div>
         </nav>
 
-        <div className="mt-8 grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="mt-5 grid gap-6 sm:mt-8 sm:gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <span className="eyebrow">Have a Broach Requirement?</span>
-            <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+            <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
               Discuss Your Broach &amp; Tooling Requirement
             </h1>
-            <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
               Contact Varad Engineering at its Broach Manufacturing Unit in Mhalunge, Chakan, Pune for broach manufacturing, contract broaching and tooling requirements.
             </p>
             {/* Official Contact Details Card */}
-            <div className="mt-8 border border-slate-200 bg-white p-6 shadow-sm space-y-5">
+            <div className="mt-5 border border-slate-200 bg-white p-4 shadow-sm space-y-4 sm:mt-8 sm:p-6 sm:space-y-5">
               <div className="flex items-start gap-4">
                 <Phone className="h-5 w-5 text-amber-600 mt-1 shrink-0" />
                 <div>

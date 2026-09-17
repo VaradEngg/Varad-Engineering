@@ -40,34 +40,34 @@ export default function IndustriesPage() {
           </div>
         </nav>
 
-        <div className="mt-8 max-w-3xl">
+        <div className="mt-5 max-w-3xl sm:mt-8">
           <span className="eyebrow">Industries</span>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+          <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
             Precision tooling for sectors of the mechanical industry
           </h1>
-          <p className="mt-6 text-lg text-slate-600">
+          <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg">
             Varad Engineering provides precision tooling solutions for sectors of the mechanical industry, with a focus on broach manufacturing, regrinding and contract broaching.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2">
           {industries.map((item) => (
             <article
               key={item.title}
-              className="border border-slate-200 bg-white p-6 shadow-sm"
+              className="border border-slate-200 bg-white p-4 sm:p-6 shadow-sm"
             >
-              <h2 className="text-2xl font-semibold text-slate-900">
+              <h2 className="text-lg font-semibold text-slate-900 sm:text-2xl">
                 {item.title}
               </h2>
-              <p className="mt-3 text-slate-600">{item.text}</p>
+              <p className="mt-2 text-xs leading-5 text-slate-600 sm:mt-3 sm:text-base">{item.text}</p>
             </article>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-14 border-t border-slate-200 pt-8">
-          <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 bg-[#0b4267] px-6 text-base font-bold text-white hover:bg-[#083653]">
-            Discuss a Requirement <ArrowRight className="h-5 w-5" />
+        <div className="mt-8 border-t border-slate-200 pt-6 sm:mt-14 sm:pt-8">
+          <Link href="/contact" className="inline-flex min-h-11 items-center gap-2 bg-[#0b4267] px-5 text-sm font-bold text-white hover:bg-[#083653] sm:min-h-12 sm:px-6 sm:text-base">
+            Discuss a Requirement <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </Link>
         </div>
       </div>

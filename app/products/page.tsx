@@ -34,17 +34,17 @@ export default function ProductsPage() {
           </div>
         </nav>
 
-        <div className="mt-8 max-w-4xl">
+        <div className="mt-5 max-w-4xl sm:mt-8">
           <span className="eyebrow">Products &amp; Services</span>
-          <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+          <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
             High Precision Broaching &amp; Tooling Solutions
           </h1>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+          <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
             From new flat and round broach fabrication to contract broaching and regrinding, Varad Engineering delivers complete tooling solutions backed by quality inspection.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
+        <div className="mt-6 grid gap-5 sm:mt-12 sm:gap-8 lg:grid-cols-2">
           {productCategories.map((product) => (
             <article
               key={product.slug}

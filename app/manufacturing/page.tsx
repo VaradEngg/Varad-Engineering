@@ -70,51 +70,51 @@ export default function ManufacturingPage() {
           </div>
         </nav>
 
-        <div className="mt-8 max-w-3xl">
+        <div className="mt-5 max-w-3xl sm:mt-8">
           <span className="eyebrow">Manufacturing</span>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+          <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
             Manufacturing Capabilities
           </h1>
-          <p className="mt-6 text-lg text-slate-600">
+          <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
             The manufacturing setup covers broaches, contract broaching, re-sharpening / regrinding and grinding capabilities, supported by inspection facilities.
           </p>
         </div>
 
         {/* Capabilities */}
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
           {capabilities.map((item) => (
             <article
               key={item.title}
               className="overflow-hidden border border-slate-200 bg-white shadow-sm"
             >
-              <div className="relative h-48 bg-slate-100">
+              <div className="relative h-40 sm:h-48 bg-slate-100">
                 <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
-              <div className="p-6">
-                <h2 className="text-xl font-bold text-slate-900">{item.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+              <div className="p-4 sm:p-6">
+                <h2 className="text-lg font-bold text-slate-900 sm:text-xl">{item.title}</h2>
+                <p className="mt-2 text-xs leading-5 text-slate-600 sm:mt-3 sm:text-sm sm:leading-6">{item.text}</p>
               </div>
             </article>
           ))}
         </div>
 
         {/* Machine List */}
-        <div className="mt-16">
-          <div className="border-b border-slate-200 pb-5">
+        <div className="mt-8 sm:mt-16">
+          <div className="border-b border-slate-200 pb-3 sm:pb-5">
             <span className="eyebrow">Equipment</span>
-            <h2 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">Manufacturing machines</h2>
+            <h2 className="mt-1.5 text-xl font-bold text-slate-900 sm:mt-2 sm:text-3xl md:text-4xl">Manufacturing machines</h2>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-4 grid gap-4 sm:mt-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {machinesList.map((machine) => (
               <article key={machine.name} className="overflow-hidden border border-slate-200 bg-white shadow-sm">
-                <div className="relative h-52 bg-slate-100">
+                <div className="relative h-40 sm:h-52 bg-slate-100">
                   <Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
-                <div className="p-6">
-                  <p className="text-sm font-bold text-amber-700">{machine.makes}</p>
-                  <h3 className="mt-2 text-xl font-bold text-slate-900">{machine.name}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{machine.details}</p>
+                <div className="p-4 sm:p-6">
+                  <p className="text-xs font-bold text-amber-700 sm:text-sm">{machine.makes}</p>
+                  <h3 className="mt-1 text-lg font-bold text-slate-900 sm:mt-2 sm:text-xl">{machine.name}</h3>
+                  <p className="mt-2 text-xs leading-5 text-slate-600 sm:mt-3 sm:text-sm sm:leading-6">{machine.details}</p>
                 </div>
               </article>
             ))}
@@ -122,7 +122,7 @@ export default function ManufacturingPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 border-t border-slate-200 pt-8">
+        <div className="mt-8 border-t border-slate-200 pt-6 sm:mt-16 sm:pt-8">
           <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 bg-[#0b4267] px-6 text-base font-bold text-white hover:bg-[#083653]">
             Discuss a Requirement <ArrowRight className="h-5 w-5" />
           </Link>

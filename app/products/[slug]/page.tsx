@@ -195,19 +195,19 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-2">
-          <article className="border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold">
+        <div className="mt-8 grid gap-4 sm:mt-16 sm:gap-8 lg:grid-cols-2">
+          <article className="border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+            <h2 className="text-lg font-semibold sm:text-2xl">
               Manufacturing considerations
             </h2>
-            <p className="mt-4 text-slate-600">{detail.manufacturing}</p>
+            <p className="mt-2 text-xs leading-5 text-slate-600 sm:mt-4 sm:text-base">{detail.manufacturing}</p>
           </article>
-          <article className="border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold">Types &amp; applications</h2>
-            <ul className="mt-4 space-y-3 text-slate-600">
+          <article className="border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+            <h2 className="text-lg font-semibold sm:text-2xl">Types &amp; applications</h2>
+            <ul className="mt-2 space-y-2 text-xs leading-5 text-slate-600 sm:mt-4 sm:space-y-3 sm:text-base">
               {detail.applications.map((application) => (
-                <li key={application} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 bg-amber-600 shrink-0" />{" "}
+                <li key={application} className="flex items-start gap-2.5">
+                  <span className="mt-1.5 h-1.5 w-1.5 bg-amber-600 shrink-0" />{" "}
                   {application}
                 </li>
               ))}
@@ -215,9 +215,9 @@ export default async function ProductDetailPage({
           </article>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Related capabilities</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 sm:mt-16">
+          <h2 className="text-xl font-bold text-slate-900 sm:text-3xl md:text-4xl">Related capabilities</h2>
+          <div className="mt-4 grid gap-4 sm:mt-8 sm:gap-6 md:grid-cols-3">
             {detail.related.map((relatedSlug) => {
               const item = productCategories.find(
                 (item) => item.slug === relatedSlug,
@@ -227,9 +227,9 @@ export default async function ProductDetailPage({
                 <Link
                   key={item.slug}
                   href={`/products/${item.slug}`}
-                  className="relative border border-slate-200 bg-white p-5 shadow-sm hover:border-slate-300"
+                  className="relative border border-slate-200 bg-white p-4 shadow-sm hover:border-slate-300 sm:p-5"
                 >
-                  <div className="relative h-44 overflow-hidden">
+                  <div className="relative h-36 overflow-hidden sm:h-44">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -237,7 +237,7 @@ export default async function ProductDetailPage({
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="mt-4 text-xl font-semibold text-slate-900">
+                  <h3 className="mt-2 text-lg font-semibold text-slate-900 sm:mt-4 sm:text-xl">
                     {item.title}
                   </h3>
                 </Link>
@@ -246,13 +246,13 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Image gallery</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 sm:mt-16">
+          <h2 className="text-xl font-bold text-slate-900 sm:text-3xl md:text-4xl">Image gallery</h2>
+          <div className="mt-4 grid gap-4 sm:mt-8 sm:gap-6 md:grid-cols-3">
             {detail.gallery.map((image, index) => (
               <div
                 key={index}
-                className="relative h-72 overflow-hidden border border-slate-200 shadow-sm"
+                className="relative h-48 overflow-hidden border border-slate-200 shadow-sm sm:h-72"
               >
                 <Image
                   src={image}

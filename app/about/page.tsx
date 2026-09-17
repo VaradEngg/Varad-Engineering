@@ -34,27 +34,27 @@ export default function AboutPage() {
           </div>
         </nav>
 
-        <div className="mt-8 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="mt-5 grid gap-6 sm:mt-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="max-w-2xl">
             <span className="eyebrow">About Varad Engineering</span>
-            <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+            <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
               Broach Manufacturing Unit
             </h1>
-            <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
               Varad Engineering was incorporated in the year <strong>2018 – 2019</strong> with a vision to serve the various sectors of the mechanical industry by supplying high-precision toolings to fulfill their requirements with optimistic and economic solutions.
             </p>
-            <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-2 text-sm leading-6 text-slate-600 sm:mt-4 sm:text-lg sm:leading-relaxed">
               The company provides complete tooling solutions with competitive pricing and minimal delivery lead time.
             </p>
           </div>
-          <div className="relative min-h-[380px] overflow-hidden border border-slate-200 bg-slate-100">
+          <div className="relative min-h-[240px] overflow-hidden border border-slate-200 bg-slate-100 sm:min-h-[380px]">
             <Image src="/images/varad/cnc.jpg" alt="Varad Engineering workshop and manufacturing facility" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 45vw" />
           </div>
         </div>
 
         {/* Vision & Mission Grid */}
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
-          <article className="border border-slate-200 bg-white p-8 shadow-sm flex flex-col justify-between">
+        <div className="mt-8 grid gap-5 sm:mt-14 sm:gap-8 lg:grid-cols-2">
+          <article className="border border-slate-200 bg-white p-5 sm:p-8 shadow-sm flex flex-col justify-between">
             <div>
               <div className="flex h-12 w-12 items-center justify-center bg-slate-900 text-amber-400 mb-6">
                 <Eye className="h-6 w-6" />
