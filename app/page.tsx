@@ -7,9 +7,10 @@ import {
 } from "lucide-react";
 import { company, clientList, inspectionFacilities, machinesList, productCategories } from "@/lib/company";
 import { Hero } from "@/components/sections/Hero";
+import { faqSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: `${company.name} | Precision Broach Manufacturing & Tooling Solutions`,
+  title: `${company.name} | Precision Broach Manufacturing & Tooling Solutions Chakan Pune`,
   description:
     "Varad Engineering is a Broach Manufacturing Unit in Mhalunge, Chakan, Pune, manufacturing flat broaches, round broaches and providing contract broaching and tooling solutions.",
   alternates: { canonical: "/" },
@@ -17,8 +18,13 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main>
-      <Hero />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main>
+        <Hero />
 
       {/* What We Make */}
       <section className="border-y border-slate-200 bg-[#eef4f8] py-8 sm:py-16 lg:py-20">
@@ -178,6 +184,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

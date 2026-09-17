@@ -1,6 +1,7 @@
 export const company = {
   name: "Varad Engineering",
   unitName: "Broach Manufacturing Unit",
+  founder: "Mr. Abhishek Tayade",
   domain: "varadengg.com",
   tagline: "High-precision broach and tooling solutions for the mechanical industry",
   address: "G.NO: 134 / 2 B H NO.10",
@@ -13,6 +14,12 @@ export const company = {
   email: "",
   gstin: "27BMEPT8875K1Z2",
   incorporatedYear: "2018 – 2019",
+  sisterConcern: {
+    name: "M/s Sayali Engineering",
+    incorporatedYear: "2008 – 2009",
+    specialization:
+      "Manufacturing precision gear components, carbide tooling solutions for CNCs, and sharpening of gear shaving cutters, shaping cutters, and hobs.",
+  },
   team: {
     total: 11,
     shopFloor: 7,
@@ -33,7 +40,7 @@ export const vision = {
   bulletPoints: [
     "Promote continuous learning and achievement orientation",
     "Pursue excellence and innovation through committed teamwork",
-    "Follow ethical business practices",
+    "Follow ethical business practices to shine as a world-class manufacturer",
   ],
 };
 
@@ -84,11 +91,11 @@ export const productCategories = [
     slug: "flat-broaches",
     title: "Flat Broaches",
     description:
-      "Key broaches, with and without chamfer, and surface broaches for high-precision tooling requirements. The setup supports flat broaches up to 1500 mm length.",
+      "Key broaches (with & without chamfer) and surface broaches up to 1500 mm length manufactured using dedicated ELB SCHLIFF surface grinding and imported resharpening machinery.",
     image: "/images/varad/broaches.jpg",
     items: [
       "Key Broaches (With & Without Chamfer)",
-      "Surface Broaches",
+      "Surface Broaches (Up to 1500 mm length)",
     ],
     capacity: "Up to 1500 mm length",
   },
@@ -96,7 +103,7 @@ export const productCategories = [
     slug: "round-broaches",
     title: "Round Broaches",
     description:
-      "Round broaches covering spline, across-flat, double-D, hexagonal and special profile requirements, with round broach sharpening capacity up to 200 mm diameter and 2000 mm length.",
+      "Precision internal round broaches including combination & interspaced spline broaches, across flat, double-D, hexagonal, and special profile broaches up to 200 mm diameter and 2000 mm length.",
     image: "/images/varad/round-broach.jpg",
     items: [
       "Spline Broaches (Combination & Interspaced)",
@@ -111,129 +118,133 @@ export const productCategories = [
     slug: "contract-broaching",
     title: "Contract Broaching",
     description:
-      "Contract broaching support for customers requiring broaching work as part of their manufacturing requirements.",
+      "Comprehensive contract broaching services backed by CNC gear testing (Hoffler ZP 260 & KAPP NILES KNM 2X), profile projection, and Grade A slip gauges.",
     image: "/images/varad/broach-detail.jpg",
     items: [
-      "Contract Broaching",
-      "Broaching for Customer Requirements",
+      "Contract Broaching Work",
+      "Customer-Specific Tooling & Aggregate Broaching",
+      "High-Precision Batch Machining",
     ],
-    capacity: "Application-specific support",
+    capacity: "Application-specific high precision support",
   },
   {
     slug: "tooling-accessories-sharpening",
-    title: "Tooling Accessories & Sharpening",
+    title: "Tooling Accessories & Cutter Sharpening",
     description:
-      "Broach resharpening and regrinding supported by four dedicated machines, along with tooling accessories and related tooling support.",
+      "Broach resharpening and regrinding supported by four dedicated imported machines (Arthur Klink, Pentagon, Lapointe), alongside sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions via sister concern Sayali Engineering.",
     image: "/images/varad/arthur-klink.jpg",
     items: [
-      "Broach Resharpening / Regrinding",
+      "Broach Resharpening / Regrinding (4 Dedicated Machines)",
+      "Gear Shaving Cutter Sharpening",
+      "Shaping Cutter Sharpening",
+      "Hob Sharpening",
+      "Carbide Tooling Solutions for CNCs",
       "Tooling Accessories",
     ],
-    capacity: "4 dedicated broach resharpening machines",
+    capacity: "4 imported broach resharpening machines + cutter sharpening",
   },
 ];
 
 export const machinesList = [
   {
     name: "Broach Resharpening / Regrinding Machines",
-    makes: "Arthur Klink, Pentagon, Lapointe",
+    makes: "Arthur Klink, Pentagon (Grd-4), Lapointe (Grd-5)",
     image: "/images/varad/arthur-klink.jpg",
     details:
-      "One machine is dedicated to sharpening and manufacturing flat broaches up to 1500 mm. One is dedicated to sharpening round broaches up to 200 mm diameter and 2000 mm length. The remaining two machines are dedicated to manufacturing new broaches.",
+      "4 Nos. total: 1 dedicated to flat broaches (up to 1500 mm), 1 dedicated to round broaches (up to 200 mm dia & 2000 mm length), and 2 dedicated to manufacturing new broaches.",
   },
   {
     name: "Cylindrical Grinding Machines",
-    makes: "TOS Make",
+    makes: "TOS Make (2 Nos.)",
     image: "/images/varad/cylindrical-grinding.jpg",
     details:
-      "Capable of handling broaches up to 125 mm diameter and 1800 mm length.",
+      "2 Nos. capable of handling broaches up to 125 mm diameter and 1800 mm length.",
   },
   {
     name: "Surface Grinding Machines",
-    makes: "ELB SCHLIFF",
+    makes: "ELB SCHLIFF (2 Nos.)",
     image: "/images/varad/surface-grinding.jpg",
     details:
-      "Capable of handling flat broaches up to 1500 mm length.",
+      "2 Nos. capable of handling flat broaches up to 1500 mm length.",
   },
   {
     name: "Spline Grinding Machine",
-    makes: "MC3 (Russian)",
+    makes: "MC3 Russian (1 No.)",
     image: "/images/varad/spline-grinding.jpg",
     details:
-      "Capable of handling jobs up to 125 mm diameter and 2000 mm length.",
+      "1 No. capable of handling jobs up to 125 mm diameter and 2000 mm length.",
   },
   {
-    name: "Lathe",
-    makes: "Lathe",
+    name: "Lathe Machine",
+    makes: "Precision Heavy Duty Lathe (1 No.)",
     image: "/images/varad/lathe.jpg",
-    details: "Part of the listed manufacturing machine setup.",
+    details: "1 No. for pre-machining and broach shank turning.",
   },
   {
-    name: "Milling",
-    makes: "Milling",
+    name: "Milling Machine",
+    makes: "Universal Milling Machine (1 No.)",
     image: "/images/varad/broach-detail.jpg",
-    details: "Part of the listed manufacturing machine setup.",
+    details: "1 No. supporting tooling accessories and profile pre-machining.",
   },
 ];
 
 export const inspectionFacilities = [
   {
     name: "Profile Projector",
-    spec: "10×, 20× & 30×",
+    spec: "10×, 20× & 30× Magnification (Electronica PP 300 H)",
     image: "/images/varad/profile-projector.jpg",
     details: "Profile projector with magnification of 10, 20 and 30 times.",
   },
   {
-    name: "CNC Gear Tester",
+    name: "Hoffler CNC Gear Tester",
     spec: "Hoffler ZP 260",
     image: "/images/varad/profile-projector-detail.jpg",
-    details: "Hoffler make CNC gear tester, model ZP 260.",
+    details: "Hoffler make CNC gear tester, model ZP 260 for gear profile and pitch verification.",
   },
   {
-    name: "CNC Gear Tester",
+    name: "KAPP NILES CNC Gear Tester",
     spec: "KAPP NILES KNM 2X",
     image: "/images/varad/profile-projector.jpg",
-    details: "KAPP NILES make CNC gear tester, KNM 2X with internal testing facility.",
+    details: "KAPP NILES make CNC gear tester, model KNM 2X with internal gear testing facility.",
   },
   {
     name: "Slip Gauge Set",
-    spec: "63 Slips · Grade A",
+    spec: "63 Slips · Grade A Accuracy",
     image: "/images/varad/broach-detail.jpg",
-    details: "Set of 63 slips with Grade A accuracy.",
+    details: "Set of 63 slip gauges with Grade A precision calibration.",
   },
   {
     name: "Inspection Pin Rollers",
-    spec: "0.75–10 mm",
+    spec: "0.75–10 mm (Least Count 0.1 mm)",
     image: "/images/varad/roller-pin-set.jpg",
-    details: "Roller pin set with least count of 0.1 mm from 0.75 to 10 mm.",
+    details: "Roller pin set with least count of 0.1 mm ranging from 0.75 mm to 10 mm.",
   },
   {
     name: "Hardness Tester",
-    spec: "10–150 Kgf",
+    spec: "FIE Group Model RASN (10–150 Kgf)",
     image: "/images/varad/hardness-tester.jpg",
-    details: "FIE Group hardness tester, Model RASN, with test load from 10 to 150 Kgf.",
+    details: "FIE Group hardness tester, Model RASN, supporting Rockwell test loads from 10 to 150 Kgf.",
   },
 ];
 
 export const clientList = [
-  { name: "PreciForge & Gears", logo: "/images/varad/pfg.png" },
-  { name: "Jagadamba Auto-components Ltd.", logo: "/images/varad/jagadamba.jpg" },
+  { name: "Mahindra & Mahindra", logo: "/images/varad/mahindra.png" },
+  { name: "Kalyani Forge Limited", logo: "/images/varad/kalyani-forge.jpg" },
+  { name: "Varroc Excellence", logo: "/images/varad/varroc.jpg" },
+  { name: "Sona (More Torque Per Gram)", logo: "/images/varad/sona.png" },
   { name: "RSB Transmissions (I) Ltd.", logo: "/images/varad/rsb.jpg" },
+  { name: "PreciForge & Gears (PFG)", logo: "/images/varad/pfg.png" },
+  { name: "Jagadamba Auto-components Ltd.", logo: "/images/varad/jagadamba.jpg" },
   { name: "Trans Auto", logo: "/images/varad/trans-auto.png" },
   { name: "Flash", logo: "/images/varad/flash.png" },
-  { name: "Kalyani", logo: "/images/varad/kalyani.jpg" },
   { name: "Wanfeng", logo: "/images/varad/wanfeng.jpg" },
-  { name: "Varroc", logo: "/images/varad/varroc.jpg" },
   { name: "IGW", logo: "/images/varad/igw.png" },
   { name: "Evolvente Technologies", logo: "/images/varad/evolvente.jpg" },
-  { name: "Mahindra", logo: "/images/varad/mahindra.png" },
   { name: "Manasi Pressings Private Limited", logo: "/images/varad/manasi.png" },
-  { name: "Sona", logo: "/images/varad/sona.png" },
   { name: "Fairfield Gear & Drive Solutions", logo: "/images/varad/fairfield.png" },
-  { name: "Kalyani Forge Limited", logo: "/images/varad/kalyani-forge.jpg" },
   { name: "Kores (India) Ltd.", logo: "/images/varad/kores.jpg" },
   { name: "Radicon Powerbuild", logo: "/images/varad/radicon.jpg" },
   { name: "Edicon", logo: "/images/varad/edicon.jpg" },
   { name: "Bhavani", logo: "/images/varad/bhavani.png" },
-  { name: "Spicer", logo: "/images/varad/spicer.png" },
+  { name: "Spicer (Dana)", logo: "/images/varad/spicer.png" },
 ];
