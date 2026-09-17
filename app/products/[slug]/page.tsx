@@ -88,9 +88,9 @@ const productDetails: Record<
   "tooling-accessories-sharpening": {
     title: "Tooling Accessories & Cutter Sharpening",
     description:
-      "Broach resharpening and regrinding supported by 4 imported machines (Arthur Klink, Pentagon Grd-4, Lapointe Grd-5), along with sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions via sister concern M/s Sayali Engineering.",
+      "Broach resharpening and regrinding supported by 4 imported machines (Arthur Klink, Pentagon Grd-4, Lapointe Grd-5), along with sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions.",
     manufacturing:
-      "Our setup includes 4 imported broach resharpening machines: 1 dedicated for flat broaches (up to 1500 mm), 1 dedicated for round broaches (up to 200 mm dia & 2000 mm length), and 2 dedicated for new broach manufacturing. Additionally, sister concern Sayali Engineering handles sharpening of gear shaving cutters, shaping cutters, and hobs.",
+      "Our setup includes 4 imported broach resharpening machines: 1 dedicated for flat broaches (up to 1500 mm), 1 dedicated for round broaches (up to 200 mm dia & 2000 mm length), and 2 dedicated for new broach manufacturing.",
     applications: [
       "Broach Resharpening & Regrinding (Arthur Klink, Pentagon, Lapointe)",
       "Gear Shaving Cutter Sharpening",

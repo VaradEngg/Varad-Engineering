@@ -13,12 +13,11 @@ export const metadata: Metadata = {
     template: `%s | ${company.name}`,
   },
   description:
-    "Varad Engineering (Founder: Mr. Abhishek Tayade) is a premier Broach Manufacturing Unit in Mhalunge, Chakan, Pune. Specializing in precision flat broaches up to 1500mm, round broaches up to 200mm dia x 2000mm length, contract broaching, gear shaving cutter sharpening, and hob sharpening.",
+    "Varad Engineering is a premier Broach Manufacturing Unit in Mhalunge, Chakan, Pune. Specializing in precision flat broaches up to 1500mm, round broaches up to 200mm dia x 2000mm length, contract broaching, gear shaving cutter sharpening, and hob sharpening.",
   keywords: [
     "Varad Engineering",
     "Varad Engineering Chakan",
     "Varad Engineering Pune",
-    "Abhishek Tayade Varad Engineering",
     "Sayali Engineering Pune",
     "Broach Manufacturer Pune",
     "Broach Manufacturer Chakan",

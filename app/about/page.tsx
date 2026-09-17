@@ -41,10 +41,10 @@ export default function AboutPage() {
               Broach Manufacturing Unit
             </h1>
             <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
-              Varad Engineering was incorporated in the year <strong>2018 – 2019</strong> as a sole proprietorship company owned by <strong>Mr. Abhishek Tayade</strong> with a vision to serve various sectors of the mechanical industry by supplying high-precision broaches and tooling solutions with competitive pricing and minimal delivery lead time.
+              Varad Engineering was incorporated in the year <strong>2018 – 2019</strong> with a vision to serve various sectors of the mechanical industry by supplying high-precision broaches and tooling solutions with competitive pricing and minimal delivery lead time.
             </p>
             <p className="mt-2 text-sm leading-6 text-slate-600 sm:mt-4 sm:text-lg sm:leading-relaxed">
-              In continuation to this, <strong>M/s Sayali Engineering</strong> is a sister concern incorporated in the year <strong>2008 – 2009</strong>, engaged in manufacturing precision gear components, CNC carbide tooling solutions, and specialized resharpening of gear shaving cutters, shaping cutters, and hobs.
+              The company provides complete tooling solutions with competitive pricing and minimal delivery lead time, supported by manufacturing, resharpening, and quality inspection capabilities.
             </p>
           </div>
           <div className="relative min-h-[240px] overflow-hidden border border-slate-200 bg-slate-100 sm:min-h-[380px]">
@@ -122,35 +122,6 @@ export default function AboutPage() {
                 <span className="text-sm font-medium text-slate-800">{value}</span>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Our Team & Infrastructure */}
-        <div className="mt-8 border border-slate-200 bg-slate-50 p-5 sm:mt-14 sm:p-8">
-          <span className="eyebrow">Workforce &amp; Sister Concern</span>
-          <h2 className="mt-2 text-xl font-bold text-slate-900 sm:text-3xl">Expert Team &amp; Manufacturing Synergy</h2>
-          <p className="mt-3 text-xs leading-5 text-slate-600 sm:text-base sm:leading-6">
-            We have a dedicated team of <strong>{company.team.total} skilled professionals</strong> geared up for precision manufacturing of broaches. Each team member is expertized in their respective fields:
-          </p>
-          <div className="mt-5 grid gap-3 sm:mt-6 sm:gap-4 sm:grid-cols-3">
-            <div className="border border-slate-200 bg-white p-4 text-center">
-              <div className="text-2xl font-black text-[#0b4267] sm:text-3xl">{company.team.shopFloor}</div>
-              <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-slate-600 sm:text-xs">Shop Floor Technicians</div>
-            </div>
-            <div className="border border-slate-200 bg-white p-4 text-center">
-              <div className="text-2xl font-black text-[#0b4267] sm:text-3xl">{company.team.salesMarketing}</div>
-              <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-slate-600 sm:text-xs">Marketing &amp; Sales</div>
-            </div>
-            <div className="border border-slate-200 bg-white p-4 text-center">
-              <div className="text-2xl font-black text-[#0b4267] sm:text-3xl">{company.team.backOffice}</div>
-              <div className="mt-1 text-[11px] font-bold uppercase tracking-wider text-slate-600 sm:text-xs">Back Office Support</div>
-            </div>
-          </div>
-          <div className="mt-5 border-t border-slate-200 pt-4 sm:mt-6 sm:pt-5">
-            <h3 className="text-sm font-bold text-slate-900 sm:text-base">Sister Concern: M/s Sayali Engineering (Est. 2008 – 2009)</h3>
-            <p className="mt-1.5 text-xs leading-5 text-slate-600 sm:mt-2 sm:text-sm sm:leading-6">
-              Owned by the same family, Sayali Engineering manufactures precision gear components, CNC carbide tooling solutions, and handles resharpening of gear shaving cutters, shaping cutters, and hobs.
-            </p>
           </div>
         </div>
 

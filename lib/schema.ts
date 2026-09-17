@@ -6,21 +6,16 @@ export const localBusinessSchema = {
   "@id": `https://${company.domain}/#organization`,
   name: company.name,
   legalName: company.name,
-  alternateName: [company.unitName, "Varad Engineering Pune", company.sisterConcern.name],
+  alternateName: [company.unitName, "Varad Engineering Pune"],
   url: `https://${company.domain}`,
   logo: `https://${company.domain}/images/varad/cnc.jpg`,
   image: `https://${company.domain}/images/varad/hero-bg.jpg`,
   description:
-    "Varad Engineering (Founder: Mr. Abhishek Tayade) is a premier Broach Manufacturing Unit in Mhalunge, Chakan, Pune. Specializing in high-precision flat broaches up to 1500mm, round broaches up to 200mm dia x 2000mm length, contract broaching, and cutter resharpening.",
+    "Varad Engineering is a premier Broach Manufacturing Unit in Mhalunge, Chakan, Pune. Specializing in high-precision flat broaches up to 1500mm, round broaches up to 200mm dia x 2000mm length, contract broaching, and cutter resharpening.",
   telephone: company.phone,
   vatID: company.gstin,
   taxID: company.gstin,
   foundingDate: "2018",
-  founder: {
-    "@type": "Person",
-    name: company.founder,
-    jobTitle: "Proprietor",
-  },
   address: {
     "@type": "PostalAddress",
     streetAddress: company.address,
@@ -112,10 +107,10 @@ export const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Who founded Varad Engineering and when was it incorporated?",
+      name: "When was Varad Engineering incorporated?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Varad Engineering was founded by Mr. Abhishek Tayade and incorporated in 2018–2019 in Mhalunge, Chakan, Pune. Its sister concern M/s Sayali Engineering was incorporated in 2008–2009.",
+        text: "Varad Engineering was incorporated in the year 2018–2019 in Mhalunge, Chakan, Pune to supply high precision broaches and tooling solutions.",
       },
     },
     {
@@ -123,7 +118,7 @@ export const faqSchema = {
       name: "What gear cutter sharpening & carbide tooling services are provided?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "In addition to broach resharpening (using 4 imported machines including Arthur Klink, Pentagon, Lapointe), sharpening of gear shaving cutters, shaping cutters, and hobs, as well as CNC carbide tooling solutions are provided through sister concern M/s Sayali Engineering.",
+        text: "In addition to broach resharpening (using 4 imported machines including Arthur Klink, Pentagon, Lapointe), sharpening of gear shaving cutters, shaping cutters, and hobs, as well as CNC carbide tooling solutions are provided.",
       },
     },
     {

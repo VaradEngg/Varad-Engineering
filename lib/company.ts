@@ -1,7 +1,6 @@
 export const company = {
   name: "Varad Engineering",
   unitName: "Broach Manufacturing Unit",
-  founder: "Mr. Abhishek Tayade",
   domain: "varadengg.com",
   tagline: "High-precision broach and tooling solutions for the mechanical industry",
   address: "G.NO: 134 / 2 B H NO.10",
@@ -14,12 +13,6 @@ export const company = {
   email: "",
   gstin: "27BMEPT8875K1Z2",
   incorporatedYear: "2018 – 2019",
-  sisterConcern: {
-    name: "M/s Sayali Engineering",
-    incorporatedYear: "2008 – 2009",
-    specialization:
-      "Manufacturing precision gear components, carbide tooling solutions for CNCs, and sharpening of gear shaving cutters, shaping cutters, and hobs.",
-  },
   team: {
     total: 11,
     shopFloor: 7,
@@ -131,7 +124,7 @@ export const productCategories = [
     slug: "tooling-accessories-sharpening",
     title: "Tooling Accessories & Cutter Sharpening",
     description:
-      "Broach resharpening and regrinding supported by four dedicated imported machines (Arthur Klink, Pentagon, Lapointe), alongside sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions via sister concern Sayali Engineering.",
+      "Broach resharpening and regrinding supported by four dedicated imported machines (Arthur Klink, Pentagon, Lapointe), alongside sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions.",
     image: "/images/varad/arthur-klink.jpg",
     items: [
       "Broach Resharpening / Regrinding (4 Dedicated Machines)",
