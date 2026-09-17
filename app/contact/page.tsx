@@ -76,11 +76,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex gap-3 pt-3 border-t border-slate-100">
+              <div className="flex flex-col sm:flex-row gap-3 pt-3 border-t border-slate-100">
                 <a href={`tel:${company.phone}`} className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#0b4267] px-5 text-sm font-bold text-white hover:bg-[#083653]">
                   <Phone className="h-4 w-4" /> Call Us
                 </a>
-                <Link href="/contact" className="inline-flex min-h-12 items-center justify-center bg-amber-400 px-5 text-sm font-bold text-slate-950 hover:bg-amber-300">
+                <Link href="#contact-form" className="inline-flex min-h-12 items-center justify-center bg-amber-400 px-5 text-sm font-bold text-slate-950 hover:bg-amber-300">
                   Request an Enquiry
                 </Link>
               </div>

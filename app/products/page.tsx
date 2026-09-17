@@ -53,7 +53,7 @@ export default function ProductsPage() {
               <div className="relative h-52 bg-slate-100">
                 <Image src={product.image} alt={product.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <div className="flex items-center justify-between">
                   <span className="bg-slate-900 px-3 py-1 text-xs font-bold text-amber-400">
                     {product.capacity}
@@ -76,7 +76,7 @@ export default function ProductsPage() {
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
+                <div className="mt-8 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
                   <Link
                     href={`/products/${product.slug}`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-amber-700"

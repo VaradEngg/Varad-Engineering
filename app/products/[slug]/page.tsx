@@ -185,7 +185,7 @@ export default async function ProductDetailPage({
             </Link>
           </div>
 
-          <div className="relative h-[420px] overflow-hidden border border-slate-200 bg-white shadow-sm">
+          <div className="relative h-64 sm:h-[420px] overflow-hidden border border-slate-200 bg-white shadow-sm">
             <Image
               src={productCategories.find((item) => item.slug === slug)?.image || "/images/varad/broaches.jpg"}
               alt={detail.title}

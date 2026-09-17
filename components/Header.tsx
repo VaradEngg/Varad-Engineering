@@ -76,7 +76,7 @@ export function Header() {
         </div>
       </div>
 
-      {mobileOpen && <div className="border-b border-slate-200 bg-white xl:hidden">
+      {mobileOpen && <div className="max-h-[calc(100vh-80px)] overflow-y-auto border-b border-slate-200 bg-white xl:hidden">
         <div className="container-shell py-4">
           <nav className="divide-y divide-slate-200" aria-label="Mobile navigation">
             {navItems.map((item) => item.label === "Products" ? (

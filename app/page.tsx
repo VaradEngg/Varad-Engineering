@@ -107,10 +107,10 @@ export default function HomePage() {
             <p className="mt-6 text-lg leading-8 text-slate-600">The listed inspection setup includes profile projection, CNC gear testing, slip gauges, inspection pin rollers and hardness testing.</p>
             <Link href="/quality" className="mt-8 inline-flex min-h-12 items-center gap-2 border border-[#0b4267] px-6 text-base font-bold text-[#0b4267] hover:bg-[#0b4267] hover:text-white"><ShieldCheck className="h-5 w-5" /> View Quality Facilities</Link>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {inspectionFacilities.slice(0, 4).map((facility) => (
               <article key={`${facility.name}-${facility.spec}`} className="overflow-hidden border border-slate-200 bg-[#f5f8fa]">
-                <div className="relative h-36 bg-slate-100"><Image src={facility.image} alt={facility.name} fill className="object-cover" sizes="25vw" /></div>
+                <div className="relative h-36 bg-slate-100"><Image src={facility.image} alt={facility.name} fill className="object-cover" sizes="(max-width: 640px) 100vw, 25vw" /></div>
                 <div className="p-4"><h3 className="text-base font-bold text-[#092d49]">{facility.name}</h3><p className="mt-1 text-xs font-bold text-amber-700">{facility.spec}</p></div>
               </article>
             ))}
@@ -154,7 +154,7 @@ export default function HomePage() {
         <div className="container-shell text-center">
           <p className="section-kicker justify-center">Our Customers</p>
           <h2 className="mt-4 text-3xl font-bold text-[#092d49] sm:text-4xl">Manufacturing customers</h2>
-          <div className="mt-10 grid grid-cols-3 items-center gap-5 sm:grid-cols-4 lg:grid-cols-7">
+          <div className="mt-10 grid grid-cols-2 items-center gap-3 sm:grid-cols-4 lg:grid-cols-7 sm:gap-5">
             {clientList.slice(0, 14).map((client) => (
               <div key={client.name} className="flex h-24 items-center justify-center border border-slate-200 bg-white p-4 grayscale transition hover:grayscale-0">
                 <Image src={client.logo} alt={client.name} width={130} height={80} className="max-h-16 w-auto object-contain" />

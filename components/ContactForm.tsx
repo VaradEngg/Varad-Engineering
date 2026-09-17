@@ -35,7 +35,7 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+    <form id="contact-form" onSubmit={handleSubmit} className="border border-slate-200 bg-white p-6 shadow-sm md:p-8">
       <h2 className="text-xl font-bold text-slate-900 mb-6">Submit Enquiry</h2>
       <div className="grid gap-5 md:grid-cols-2">
         {([

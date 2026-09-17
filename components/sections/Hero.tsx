@@ -26,17 +26,17 @@ export function Hero() {
       </div>
 
       <div className="container-shell relative z-10">
-        <div className="min-h-[580px] flex items-center py-14 lg:py-20">
+        <div className="flex min-h-0 items-center py-8 sm:min-h-[580px] sm:py-14 lg:py-20">
           {/* CONTENT */}
           <div className="max-w-2xl">
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-[2px] w-10 bg-amber-400" />
-              <span className="text-sm font-bold uppercase tracking-[0.2em] text-amber-400">
+            <div className="mb-3 flex items-center gap-2.5 sm:mb-5 sm:gap-3">
+              <span className="h-[2px] w-6 bg-amber-400 sm:w-10" />
+              <span className="text-xs font-bold uppercase tracking-[0.16em] text-amber-400 sm:text-sm sm:tracking-[0.2em]">
                 Broach Manufacturing Unit
               </span>
             </div>
 
-            <h1 className="text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-white sm:text-6xl lg:text-[4.1rem]">
+            <h1 className="text-2xl font-bold leading-[1.12] tracking-[-0.02em] text-white sm:text-5xl md:text-6xl lg:text-[4.1rem]">
               Precision
               <br />
               Broaches for
@@ -44,43 +44,43 @@ export function Hero() {
               <span className="text-amber-400">Mechanical Manufacturing</span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-200 sm:text-xl">
+            <p className="mt-3 max-w-xl text-sm leading-6 text-slate-200 sm:mt-7 sm:text-xl sm:leading-8">
               We manufacture flat broaches and round broaches, with dedicated
               broach regrinding, grinding and contract broaching capabilities.
             </p>
 
             {/* CTA BUTTONS */}
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-2.5 sm:mt-9 sm:flex-row sm:gap-3">
               <Link
                 href="/products"
-                className="inline-flex min-h-[54px] items-center justify-center gap-3 bg-amber-400 px-7 text-base font-bold text-slate-950 transition hover:bg-amber-300"
+                className="inline-flex min-h-[46px] items-center justify-center gap-2.5 bg-amber-400 px-5 text-sm font-bold text-slate-950 transition hover:bg-amber-300 sm:min-h-[54px] sm:px-7 sm:text-base"
               >
                 View Products
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
 
               <Link
                 href="/contact"
-                className="inline-flex min-h-[54px] items-center justify-center gap-3 border border-slate-400 bg-transparent px-7 text-base font-bold text-white transition hover:border-white hover:bg-white hover:text-slate-900"
+                className="inline-flex min-h-[46px] items-center justify-center gap-2.5 border border-slate-400 bg-transparent px-5 text-sm font-bold text-white transition hover:border-white hover:bg-white hover:text-slate-900 sm:min-h-[54px] sm:px-7 sm:text-base"
               >
                 Request an Enquiry
               </Link>
             </div>
 
             {/* CONTACT INFO */}
-            <div className="mt-9 flex flex-col gap-4 text-base font-semibold sm:flex-row sm:items-center sm:gap-7">
+            <div className="mt-6 flex flex-col gap-2.5 text-xs font-semibold sm:mt-9 sm:flex-row sm:items-center sm:gap-7 sm:text-base">
               <a
                 href="tel:+917774038964"
-                className="flex items-center gap-3 hover:text-amber-400"
+                className="flex items-center gap-2 hover:text-amber-400 sm:gap-3"
               >
-                <Phone className="h-5 w-5 text-amber-400" />
+                <Phone className="h-4 w-4 text-amber-400 sm:h-5 sm:w-5" />
                 7774038964
               </a>
 
               <span className="hidden h-6 w-px bg-slate-600 sm:block" />
 
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-amber-400" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <MapPin className="h-4 w-4 text-amber-400 sm:h-5 sm:w-5" />
                 Mhalunge, Chakan, Pune – 410501
               </div>
             </div>
