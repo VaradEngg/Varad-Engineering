@@ -1,7 +1,7 @@
 export const company = {
   name: "Varad Engineering",
   unitName: "Broach Manufacturing Unit",
-  domain: "varadengg.com",
+  domain: process.env.NEXT_PUBLIC_SITE_DOMAIN || "varadengineeringchakan.com",
   tagline: "High-precision broach and tooling solutions for the mechanical industry",
   address: "G.NO: 134 / 2 B H NO.10",
   city: "Mhalunge, Chakan Tal. Khed",
