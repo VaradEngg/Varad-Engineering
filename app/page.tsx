@@ -156,16 +156,56 @@ export default function HomePage() {
       </section>
 
       {/* Customers */}
-      <section className="bg-white py-8 sm:py-16">
+      <section className="bg-white py-8 sm:py-16 overflow-hidden">
         <div className="container-shell text-center">
           <p className="section-kicker justify-center">Our Customers</p>
           <h2 className="mt-2 text-2xl font-bold text-[#092d49] sm:mt-4 sm:text-4xl">Manufacturing customers</h2>
-          <div className="mt-6 grid grid-cols-2 items-center gap-3 sm:mt-10 sm:grid-cols-4 lg:grid-cols-7 sm:gap-5">
-            {clientList.slice(0, 14).map((client) => (
-              <div key={client.name} className="flex h-20 sm:h-24 items-center justify-center border border-slate-200 bg-white p-3 sm:p-4 grayscale transition hover:grayscale-0">
-                <Image src={client.logo} alt={client.name} width={130} height={80} className="max-h-12 sm:max-h-16 w-auto object-contain" />
-              </div>
-            ))}
+        </div>
+
+        <div className="relative mt-8 sm:mt-12 w-full overflow-hidden py-2">
+          {/* Edge gradient fades for smooth entrance/exit */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-10 w-16 sm:w-32 bg-gradient-to-r from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 z-10 w-16 sm:w-32 bg-gradient-to-l from-white via-white/80 to-transparent" />
+
+          {/* Seamless scrolling marquee track */}
+          <div className="flex w-max animate-marquee">
+            {/* Primary track */}
+            <div className="flex shrink-0 items-center gap-4 pr-4 sm:gap-6 sm:pr-6">
+              {clientList.map((client) => (
+                <div
+                  key={client.name}
+                  className="group flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white p-3 sm:p-4 shadow-sm transition-all duration-300 hover:border-amber-400 hover:shadow-md hover:-translate-y-0.5"
+                  title={client.name}
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={150}
+                    height={80}
+                    className="max-h-12 sm:max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Seamless duplicate track for infinite back-to-back loop */}
+            <div className="flex shrink-0 items-center gap-4 pr-4 sm:gap-6 sm:pr-6" aria-hidden="true">
+              {clientList.map((client, idx) => (
+                <div
+                  key={`dup-${client.name}-${idx}`}
+                  className="group flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 items-center justify-center rounded-lg border border-slate-200 bg-white p-3 sm:p-4 shadow-sm transition-all duration-300 hover:border-amber-400 hover:shadow-md hover:-translate-y-0.5"
+                  title={client.name}
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={150}
+                    height={80}
+                    className="max-h-12 sm:max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
