@@ -10,7 +10,7 @@ export const company = {
   country: "India",
   phone: "+91 7774038964",
   phoneDisplay: "7774038964",
-  email: "",
+  email: "varadengineeringg@gmail.com",
   gstin: "27BMEPT8875K1Z2",
   incorporatedYear: "2018 – 2019",
   team: {
