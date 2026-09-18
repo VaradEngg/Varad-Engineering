@@ -5,22 +5,33 @@ export const localBusinessSchema = {
   "@type": ["LocalBusiness", "AutomotiveBusiness"],
   "@id": `https://${company.domain}/#organization`,
   name: company.name,
-  legalName: company.name,
-  alternateName: [company.unitName, "Varad Engineering Pune"],
+  legalName: "Varad Engineering",
+  alternateName: [
+    "Varad Engineering Chakan",
+    "Varad Engineering Broach Manufacturing Unit",
+    "Varad Engineering Mhalunge",
+    "Varad Engineering Pune",
+    "Varad Engineering Broach Unit",
+    "Varad Engineering MIDC Chakan",
+  ],
+  disambiguatingDescription:
+    "Varad Engineering (Broach Manufacturing Unit) located in Mhalunge, Chakan, Tal. Khed, Dist. Pune (GSTIN: 27BMEPT8875K1Z2). Specializing in high-precision flat broaches up to 1500mm, round spline broaches up to 200mm dia x 2000mm length, contract broaching, and tool resharpening. Note: Distinct from valve traders, forging manufacturers, or fire safety suppliers.",
   url: `https://${company.domain}`,
   logo: `https://${company.domain}/images/varad/cnc.jpg`,
   image: `https://${company.domain}/images/varad/hero-bg.jpg`,
   description:
-    "Varad Engineering is a premier Broach Manufacturing Unit in Mhalunge, Chakan, Pune. Specializing in high-precision flat broaches up to 1500mm, round broaches up to 200mm dia x 2000mm length, contract broaching, and cutter resharpening.",
+    "Varad Engineering is an independent premier Broach Manufacturing Unit in Mhalunge, Chakan, Pune. Specializing in high-precision flat broaches up to 1500mm, round broaches up to 200mm dia x 2000mm length, contract broaching, gear shaving cutter sharpening, and hob sharpening.",
   telephone: company.phone,
+  email: company.email || "varadengineeringg@gmail.com",
   vatID: company.gstin,
   taxID: company.gstin,
   foundingDate: "2018",
+  hasMap: "https://maps.google.com/?q=18.7606,73.8617",
   address: {
     "@type": "PostalAddress",
     streetAddress: company.address,
     addressLocality: "Mhalunge, Chakan, Tal. Khed",
-    addressRegion: "Maharashtra",
+    addressRegion: "Dist. Pune, Maharashtra",
     postalCode: company.pincode,
     addressCountry: "IN",
   },
@@ -39,32 +50,80 @@ export const localBusinessSchema = {
   ],
   areaServed: [
     { "@type": "Place", name: "Chakan" },
+    { "@type": "Place", name: "Mhalunge" },
+    { "@type": "Place", name: "Bhosari" },
+    { "@type": "Place", name: "Talawade" },
+    { "@type": "Place", name: "Pimpri-Chinchwad" },
     { "@type": "Place", name: "Pune" },
+    { "@type": "Place", name: "Talegaon Dabhade" },
+    { "@type": "Place", name: "Ranjangaon MIDC" },
+    { "@type": "Place", name: "Sanaswadi" },
     { "@type": "Place", name: "Maharashtra" },
     { "@type": "Place", name: "India" },
   ],
   priceRange: "$$$",
   knowsAbout: [
+    "Broach Manufacturing",
     "Flat Broaches",
     "Round Broaches",
-    "Key Broaches with Chamfer",
-    "Surface Broaches",
+    "Keyway Broaches with Chamfer",
+    "Surface Broaches up to 1500 mm",
     "Spline Broaches",
+    "Involute Spline Broaches",
     "Across Flat Broaches",
     "Double D Broaches",
     "Hexagonal Broaches",
-    "Contract Broaching",
+    "Contract Broaching Services",
     "Broach Regrinding",
+    "Broach Resharpening Chakan",
     "Gear Shaving Cutter Sharpening",
     "Shaping Cutter Sharpening",
-    "Hob Sharpening",
+    "Hob Sharpening Pune",
     "Carbide Tooling Solutions for CNCs",
     "Hoffler CNC Gear Tester ZP 260",
     "KAPP NILES CNC Gear Tester KNM 2X",
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Broach Manufacturing & Tooling Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Flat Broaches Manufacturing",
+          description: "Key broaches and surface broaches up to 1500 mm length.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Round Broaches Manufacturing",
+          description: "Internal round, spline, double-D, and hexagonal broaches up to 200 mm dia x 2000 mm length.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Contract Broaching Services",
+          description: "High-precision batch machining and component broaching in Chakan, Pune.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Broach Resharpening & Regrinding",
+          description: "Supported by 4 imported machines including Arthur Klink, Pentagon, and Lapointe.",
+        },
+      },
+    ],
+  },
   sameAs: [
     `https://${company.domain}`,
-    `https://www.${company.domain}`,
+    `https://www.google.com/maps?cid=18.7606,73.8617`,
   ],
 };
 
@@ -72,8 +131,12 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `https://${company.domain}/#website`,
-  name: company.name,
-  alternateName: ["Varad Engineering Chakan", "Varad Engineering Pune"],
+  name: "Varad Engineering | Broach Manufacturer Chakan Pune",
+  alternateName: [
+    "Varad Engineering Chakan",
+    "Varad Engineering Pune",
+    "Varad Engineering Broach Manufacturing Unit",
+  ],
   url: `https://${company.domain}`,
   publisher: {
     "@id": `https://${company.domain}/#organization`,
@@ -99,31 +162,47 @@ export const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What types of broaches does Varad Engineering manufacture in Chakan, Pune?",
+      name: "Where is Varad Engineering Broach Manufacturing Unit located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Varad Engineering manufactures Flat Broaches (Key Broaches with & without chamfer, Surface Broaches up to 1500 mm length) and Round Broaches (Spline Broaches combination & interspaced, Across Flat, Double D, Hexagonal, and Special Profile Broaches up to 200 mm diameter and 2000 mm length).",
+        text: "Varad Engineering is located at G.NO: 134 / 2 B H NO.10, Mhalunge, Chakan, Tal. Khed, Dist. Pune – 410501, Maharashtra, India. We are an independent broach manufacturing and contract broaching unit in the Chakan automotive MIDC belt (Phone: +91 7774038964, GSTIN: 27BMEPT8875K1Z2).",
       },
     },
     {
       "@type": "Question",
-      name: "When was Varad Engineering incorporated?",
+      name: "What broach manufacturing and contract broaching services does Varad Engineering provide in Chakan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Varad Engineering was incorporated in the year 2018–2019 in Mhalunge, Chakan, Pune to supply high precision broaches and tooling solutions.",
+        text: "Varad Engineering specializes exclusively in Flat Broaches (Key Broaches with & without chamfer, Surface Broaches up to 1500 mm length), Round Broaches (Spline, Double D, Hexagonal, and Special Profile Broaches up to 200 mm dia x 2000 mm length), Contract Broaching, and Cutter Resharpening.",
       },
     },
     {
       "@type": "Question",
-      name: "What gear cutter sharpening & carbide tooling services are provided?",
+      name: "How is Varad Engineering Chakan differentiated from other companies named Varad Engineering?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "In addition to broach resharpening (using 4 imported machines including Arthur Klink, Pentagon, Lapointe), sharpening of gear shaving cutters, shaping cutters, and hobs, as well as CNC carbide tooling solutions are provided.",
+        text: "Varad Engineering in Mhalunge, Chakan (GSTIN: 27BMEPT8875K1Z2) is exclusively a high-precision broach manufacturing and regrinding unit serving Tier-1 automotive and mechanical OEMs. It is completely independent and not associated with UPVC valve traders in Navi Mumbai, metal forging suppliers, or fire protection companies that share a similar name.",
       },
     },
     {
       "@type": "Question",
-      name: "What CNC gear testing and inspection equipment is available at the factory?",
+      name: "When was Varad Engineering incorporated in Chakan?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Varad Engineering was incorporated in the year 2018–2019 in Mhalunge, Chakan, Pune to supply high precision broaches and tooling solutions with competitive pricing and minimal lead time.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What gear cutter sharpening and regrinding machines are available at the factory?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Broach resharpening is supported by 4 dedicated imported machines (Arthur Klink, Pentagon Grd-4, Lapointe Grd-5), alongside sharpening for gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What CNC gear testing and inspection equipment is installed at the facility?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Inspection facilities include Hoffler CNC Gear Tester (ZP 260), KAPP NILES CNC Gear Tester (KNM 2X with internal testing), Profile Projector (10x, 20x, 30x), Grade A 63-piece Slip Gauge set, Inspection Pin Rollers (0.75 to 10 mm), and FIE Group Hardness Tester (RASN, 10 to 150 Kgf).",
@@ -139,3 +218,4 @@ export const faqSchema = {
     },
   ],
 };
+

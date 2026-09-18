@@ -5,9 +5,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata = {
-  title: "Quality Policy & Inspection | Varad Engineering",
+  title: "Quality Policy & Inspection | Varad Engineering Broach Unit Chakan",
   description:
-    "Varad Engineering quality policy and listed inspection facilities, including profile projection, CNC gear testing, slip gauges, inspection pin rollers and hardness testing.",
+    "Inspection equipment at Varad Engineering Chakan: Hoffler CNC Gear Tester ZP 260, KAPP NILES KNM 2X, profile projector, Grade A slip gauges, and hardness tester.",
   alternates: { canonical: "/quality" },
 };
 

@@ -5,9 +5,9 @@ import { company, machinesList, inspectionFacilities } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Gallery | Varad Engineering",
+  title: "Gallery | Varad Engineering Broach Manufacturing Unit Chakan",
   description:
-    "View Varad Engineering broaches, workshop, manufacturing machines and quality inspection facilities in Mhalunge, Chakan, Pune.",
+    "View photos of precision flat broaches, round broaches, imported regrinding machines, and CNC gear testing facilities at Varad Engineering in Mhalunge, Chakan, Pune.",
   alternates: { canonical: "/gallery" },
 };
 

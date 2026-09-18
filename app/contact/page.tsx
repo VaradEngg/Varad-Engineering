@@ -5,9 +5,9 @@ import { ContactForm } from "@/components/ContactForm";
 import { MapPin, Phone, FileText } from "lucide-react";
 
 export const metadata = {
-  title: "Contact Us | Varad Engineering Broach Unit Chakan",
+  title: "Contact Us | Varad Engineering Broach Unit Chakan Pune",
   description:
-    "Contact Varad Engineering, Mhalunge, Chakan, Pune for broach manufacturing, contract broaching and tooling requirements.",
+    "Contact Varad Engineering at its Broach Manufacturing Unit in Mhalunge, Chakan, Pune (Phone: +91 7774038964, GSTIN: 27BMEPT8875K1Z2) for flat & round broach manufacturing, contract broaching and regrinding.",
   alternates: { canonical: "/contact" },
 };
 

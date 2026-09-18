@@ -5,9 +5,9 @@ import { productCategories, company } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Products & Services | Varad Engineering Broach Manufacturing",
+  title: "Products & Services | Varad Engineering Broach Unit Chakan",
   description:
-    "Explore Varad Engineering's complete range of Flat Broaches, Round Broaches, Contract Broaching, and Tooling Accessories & Cutter Sharpening Services.",
+    "Explore Varad Engineering's complete range of Flat Broaches up to 1500mm, Round Broaches up to 2000mm, Contract Broaching, and Cutter Sharpening in Chakan, Pune.",
   alternates: { canonical: "/products" },
 };
 

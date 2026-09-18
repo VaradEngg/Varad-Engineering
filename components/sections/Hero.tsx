@@ -33,18 +33,17 @@ export function Hero() {
             <div className="mb-3 flex items-center gap-2.5 sm:mb-4 sm:gap-3">
               <span className="h-[2px] w-6 bg-amber-400 sm:w-10" />
               <span className="text-xs font-bold uppercase tracking-[0.16em] text-amber-400 sm:text-sm sm:tracking-[0.2em]">
-                Broach Manufacturing Unit
+                Varad Engineering &bull; Chakan, Pune
               </span>
             </div>
 
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[44px]">
-              Precision Broaches for{" "}
-              <span className="text-amber-400">Mechanical Manufacturing</span>
+              Precision Broach Manufacturer in{" "}
+              <span className="text-amber-400">Chakan, Pune</span>
             </h1>
 
             <p className="mt-3.5 max-w-xl text-sm leading-relaxed text-slate-200 sm:mt-5 sm:text-base lg:text-lg sm:leading-7">
-              We manufacture flat broaches and round broaches, with dedicated
-              broach regrinding, grinding and contract broaching capabilities.
+              Specialized broach manufacturing unit in Mhalunge, Chakan. We manufacture custom flat broaches up to 1500 mm, round broaches up to 2000 mm, alongside contract broaching and tool regrinding.
             </p>
 
             {/* CTA BUTTONS */}

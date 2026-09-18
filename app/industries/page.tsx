@@ -4,9 +4,9 @@ import { company } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Industries | Varad Engineering",
+  title: "Industries Served | Varad Engineering Broach Unit Chakan",
   description:
-    "Varad Engineering serves various sectors of the mechanical industry with high-precision broach and tooling solutions.",
+    "Varad Engineering supplies high-precision broaches and contract broaching to Automotive OEMs, Transmission & Drivetrain Manufacturers, and Heavy Engineering in Chakan, Pune.",
   alternates: { canonical: "/industries" },
 };
 

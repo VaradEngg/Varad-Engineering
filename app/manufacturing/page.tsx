@@ -5,9 +5,9 @@ import { company, machinesList } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Manufacturing Capabilities | Varad Engineering",
+  title: "Manufacturing Capabilities | Varad Engineering Broach Unit Chakan",
   description:
-    "Explore Varad Engineering's broach manufacturing, resharpening, grinding and tooling capabilities in Mhalunge, Chakan, Pune.",
+    "Explore Varad Engineering's broach manufacturing machinery, Arthur Klink resharpening, ELB SCHLIFF surface grinding, and TOS cylindrical grinding in Mhalunge, Chakan, Pune.",
   alternates: { canonical: "/manufacturing" },
 };
 

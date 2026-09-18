@@ -5,9 +5,9 @@ import { company, vision, mission, coreValues, qualityPolicy } from "@/lib/compa
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "About Us | Varad Engineering Broach Manufacturing Unit",
+  title: "About Us | Varad Engineering Broach Manufacturing Unit Chakan",
   description:
-    "Learn about Varad Engineering, a specialized Broach Manufacturing Unit in Chakan, Pune, incorporated in 2018–2019.",
+    "Learn about Varad Engineering, an independent Broach Manufacturing Unit in Mhalunge, Chakan, Pune (GSTIN: 27BMEPT8875K1Z2), incorporated in 2018–2019 to manufacture precision broaches and tooling.",
   alternates: { canonical: "/about" },
 };
 
