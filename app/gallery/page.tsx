@@ -5,9 +5,9 @@ import { company, machinesList, inspectionFacilities } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Gallery | Varad Engineering Broach Manufacturing Unit Chakan",
+  title: "Gallery | Varad Engineering Chakan",
   description:
-    "View photos of precision flat broaches, round broaches, imported regrinding machines, and CNC gear testing facilities at Varad Engineering in Mhalunge, Chakan, Pune.",
+    "View Varad Engineering's broaches, manufacturing equipment, workshop and inspection facilities in Mhalunge, Chakan, Pune.",
   alternates: { canonical: "/gallery" },
 };
 
@@ -17,15 +17,15 @@ const breadcrumb = breadcrumbSchema([
 ]);
 
 const productImages = [
-  { src: "/images/varad/broach-hero.jpg", title: "Broach Manufacturing", alt: "Broaches manufactured by Varad Engineering" },
-  { src: "/images/varad/broaches.jpg", title: "Broaches", alt: "Precision broaches" },
-  { src: "/images/varad/round-broach.jpg", title: "Round Broach", alt: "Round broach" },
-  { src: "/images/varad/broach-detail.jpg", title: "Broach Detail", alt: "Close view of a precision broach" },
+  { src: "/images/varad/broach-hero.jpg", title: "Broach Manufacturing", alt: "Precision broaches manufactured by Varad Engineering" },
+  { src: "/images/varad/broaches.jpg", title: "Broaches", alt: "Precision flat and keyway broaches manufactured by Varad Engineering" },
+  { src: "/images/varad/round-broach.jpg", title: "Round Broach", alt: "Round broach manufactured by Varad Engineering" },
+  { src: "/images/varad/broach-detail.jpg", title: "Broach Detail", alt: "Detail view of precision broach tooling at Varad Engineering" },
 ];
 
 const workshopImages = [
-  { src: "/images/varad/cnc.jpg", title: "CNC Machining Setup", alt: "CNC machining facility at Varad Engineering" },
-  { src: "/images/varad/cylindrical-grinding.jpg", title: "Grinding Facility", alt: "Grinding setup at Varad Engineering" },
+  { src: "/images/varad/cnc.jpg", title: "CNC Machining Setup", alt: "Varad Engineering manufacturing workshop in Chakan, Pune" },
+  { src: "/images/varad/cylindrical-grinding.jpg", title: "Grinding Facility", alt: "Grinding facility at Varad Engineering workshop in Chakan, Pune" },
 ];
 
 export default function GalleryPage() {
@@ -45,10 +45,10 @@ export default function GalleryPage() {
           <div className="mt-5 max-w-3xl sm:mt-8">
             <span className="eyebrow">Gallery</span>
             <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
-              Our products, workshop, machines and inspection facilities
+              Varad Engineering Gallery
             </h1>
             <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-5 sm:text-lg sm:leading-8">
-              A visual look at the broaches, manufacturing setup and inspection facilities at Varad Engineering.
+              A visual look at the precision broaches, manufacturing workshop, machinery and quality inspection facilities at Varad Engineering in Mhalunge, Chakan, Pune.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function GalleryPage() {
               {inspectionFacilities.map((item) => (
                 <figure key={`${item.name}-${item.spec}`} className="overflow-hidden border border-slate-200 bg-white">
                   <div className="relative h-40 sm:h-52 bg-slate-100">
-                    <Image src={item.image} alt={`${item.name} at Varad Engineering`} fill quality={80} className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
+                    <Image src={item.image} alt={`${item.name} quality inspection equipment at Varad Engineering`} fill quality={80} className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
                   </div>
                   <figcaption className="p-4 sm:p-5">
                     <p className="text-xs font-bold text-amber-700 sm:text-sm">{item.spec}</p>
@@ -128,10 +128,24 @@ export default function GalleryPage() {
             </div>
           </section>
 
-          <div className="mt-8 border-t border-slate-200 pt-6 sm:mt-16 sm:pt-8">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 pt-6 sm:mt-16 sm:pt-8">
             <Link href="/contact" className="inline-flex min-h-11 items-center gap-2 bg-[#0b4267] px-5 text-sm font-bold text-white hover:bg-[#083653] sm:min-h-12 sm:px-6 sm:text-base">
               Discuss a Requirement <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/products"
+                className="text-sm font-semibold text-[#0b4267] hover:underline"
+              >
+                Products &amp; Tooling &rarr;
+              </Link>
+              <Link
+                href="/manufacturing"
+                className="text-sm font-semibold text-[#0b4267] hover:underline"
+              >
+                Manufacturing Capabilities &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </main>

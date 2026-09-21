@@ -7,22 +7,17 @@ import {
 } from "lucide-react";
 import { company, clientList, inspectionFacilities, machinesList, productCategories } from "@/lib/company";
 import { Hero } from "@/components/sections/Hero";
-import { faqSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Varad Engineering | Broach Manufacturer Chakan Pune | Broach Manufacturing Unit",
+  title: "Varad Engineering | Broach Manufacturer in Chakan, Pune",
   description:
-    "Varad Engineering is an independent Broach Manufacturing Unit in Mhalunge, Chakan, Pune (GSTIN: 27BMEPT8875K1Z2). Specialists in precision flat broaches, round broaches, contract broaching, and tool resharpening.",
+    "Varad Engineering is a specialized Broach Manufacturing Unit in Mhalunge, Chakan, Pune (GSTIN: 27BMEPT8875K1Z2). Specialists in precision flat broaches, round broaches, contract broaching, and tool regrinding.",
   alternates: { canonical: "/" },
 };
 
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <main>
         <Hero />
 
@@ -31,6 +26,10 @@ export default function HomePage() {
           <div className="container-shell flex flex-wrap items-center justify-between gap-y-2 gap-x-6 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
               <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="font-semibold text-white">
+                Varad Engineering
+              </span>
+              <span className="text-slate-400">&bull;</span>
               <span className="font-semibold tracking-wide text-amber-300 uppercase text-[11px] sm:text-xs">
                 Broach Manufacturing Unit
               </span>
@@ -43,7 +42,7 @@ export default function HomePage() {
               <span>GSTIN: <strong className="text-white font-mono">{company.gstin}</strong></span>
               <span className="text-slate-600">&bull;</span>
               <a href={`tel:${company.phone}`} className="font-semibold text-amber-400 hover:underline">
-                {company.phone}
+                {company.phoneDisplay}
               </a>
             </div>
           </div>

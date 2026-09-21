@@ -20,8 +20,5 @@ const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `https://${company.domain}${route}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: route === "/" ? 1 : 0.8,
   }));
 }

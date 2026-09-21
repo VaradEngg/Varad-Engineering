@@ -5,9 +5,9 @@ import { ContactForm } from "@/components/ContactForm";
 import { MapPin, Phone, FileText } from "lucide-react";
 
 export const metadata = {
-  title: "Contact Us | Varad Engineering Broach Unit Chakan Pune",
+  title: "Contact Varad Engineering | Broach Manufacturer Chakan",
   description:
-    "Contact Varad Engineering at its Broach Manufacturing Unit in Mhalunge, Chakan, Pune (Phone: +91 7774038964, GSTIN: 27BMEPT8875K1Z2) for flat & round broach manufacturing, contract broaching and regrinding.",
+    "Contact Varad Engineering in Mhalunge, Chakan, Pune for precision flat and round broach manufacturing, contract broaching, regrinding and tooling requirements.",
   alternates: { canonical: "/contact" },
 };
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
               Discuss Your Broach &amp; Tooling Requirement
             </h1>
             <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
-              Contact Varad Engineering at its Broach Manufacturing Unit in Mhalunge, Chakan, Pune for broach manufacturing, contract broaching and tooling requirements.
+              Contact Varad Engineering at its Broach Manufacturing Unit in Mhalunge, Chakan, Pune for precision flat and round broach manufacturing, contract broaching, regrinding and tooling requirements.
             </p>
             {/* Official Contact Details Card */}
             <div className="mt-5 border border-slate-200 bg-white p-4 shadow-sm space-y-4 sm:mt-8 sm:p-6 sm:space-y-5">
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 <div>
                   <div className="text-xs uppercase tracking-wider text-slate-400 font-semibold">Works Address</div>
                   <div className="text-sm font-medium text-slate-800 leading-relaxed">
-                    Mhalunge, Chakan, Tal. Khed, Dist. Pune – 410501, India
+                    G.NO: 134 / 2 B H NO.10, Mhalunge, Chakan, Tal. Khed, Dist. Pune, Maharashtra – 410501, India
                   </div>
                 </div>
               </div>

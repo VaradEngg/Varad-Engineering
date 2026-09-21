@@ -5,9 +5,9 @@ import { company, vision, mission, coreValues, qualityPolicy } from "@/lib/compa
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "About Us | Varad Engineering Broach Manufacturing Unit Chakan",
+  title: "About Varad Engineering | Broach Manufacturer Chakan",
   description:
-    "Learn about Varad Engineering, an independent Broach Manufacturing Unit in Mhalunge, Chakan, Pune (GSTIN: 27BMEPT8875K1Z2), incorporated in 2018–2019 to manufacture precision broaches and tooling.",
+    "Learn about Varad Engineering, a broach manufacturing unit in Mhalunge, Chakan, Pune, manufacturing precision flat and round broaches and providing tooling solutions.",
   alternates: { canonical: "/about" },
 };
 
@@ -36,11 +36,14 @@ export default function AboutPage() {
 
         <div className="mt-5 grid gap-6 sm:mt-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="max-w-2xl">
-            <span className="eyebrow">About Varad Engineering</span>
+            <span className="eyebrow">About Us</span>
             <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
-              Broach Manufacturing Unit
+              About Varad Engineering
             </h1>
-            <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
+            <p className="mt-2 text-base font-semibold text-[#0a3858] sm:text-lg">
+              Broach Manufacturing Unit in Mhalunge, Chakan, Pune
+            </p>
+            <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-5 sm:text-lg sm:leading-relaxed">
               Varad Engineering was incorporated in the year <strong>2018 – 2019</strong> with a vision to serve various sectors of the mechanical industry by supplying high-precision broaches and tooling solutions with competitive pricing and minimal delivery lead time.
             </p>
             <p className="mt-2 text-sm leading-6 text-slate-600 sm:mt-4 sm:text-lg sm:leading-relaxed">
@@ -133,12 +136,26 @@ export default function AboutPage() {
           <p className="mt-4 max-w-3xl text-slate-300 text-base leading-relaxed">
             Located at Mhalunge, Chakan, Varad Engineering combines its broach manufacturing setup with dedicated personnel and precision grinding and inspection equipment to serve tooling requirements.
           </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center gap-2 bg-amber-400 px-6 py-3.5 text-sm font-semibold text-slate-950 hover:bg-amber-300 transition-colors"
-          >
-            Contact Us <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-amber-400 px-6 py-3.5 text-sm font-semibold text-slate-950 hover:bg-amber-300 transition-colors"
+            >
+              Contact Us <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 border border-slate-600 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            >
+              View Products &amp; Services
+            </Link>
+            <Link
+              href="/manufacturing"
+              className="inline-flex items-center gap-2 border border-slate-600 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            >
+              Manufacturing Capabilities
+            </Link>
+          </div>
         </div>
       </div>
     </>

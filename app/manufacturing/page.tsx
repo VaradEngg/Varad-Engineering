@@ -5,9 +5,9 @@ import { company, machinesList } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Manufacturing Capabilities | Varad Engineering Broach Unit Chakan",
+  title: "Manufacturing Capabilities | Varad Engineering Chakan",
   description:
-    "Explore Varad Engineering's broach manufacturing machinery, Arthur Klink resharpening, ELB SCHLIFF surface grinding, and TOS cylindrical grinding in Mhalunge, Chakan, Pune.",
+    "Explore Varad Engineering's broach manufacturing, resharpening, regrinding and grinding capabilities in Mhalunge, Chakan, Pune, including flat and round broach production.",
   alternates: { canonical: "/manufacturing" },
 };
 
@@ -27,7 +27,7 @@ const capabilities = [
   },
   {
     title: "Round Broaches",
-    text: "Spline, across-flat, double-D, hexagonal and special profile broaches; round broach sharpening up to 200 mm diameter and 2000 mm length.",
+    text: "Spline, across-flat, double-D, hexagonal and special profile broaches up to 200 mm diameter and 2000 mm length.",
     image: "/images/varad/round-broach.jpg",
   },
   {
@@ -76,7 +76,7 @@ export default function ManufacturingPage() {
             Manufacturing Capabilities
           </h1>
           <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-8">
-            The manufacturing setup covers broaches, contract broaching, re-sharpening / regrinding and grinding capabilities, supported by inspection facilities.
+            Varad Engineering provides specialized manufacturing capabilities across flat broach manufacturing, round broach manufacturing, contract broaching, broach resharpening and regrinding, cylindrical grinding, surface grinding, spline grinding, and precision quality inspection in Mhalunge, Chakan, Pune.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function ManufacturingPage() {
         <div className="mt-8 sm:mt-16">
           <div className="border-b border-slate-200 pb-3 sm:pb-5">
             <span className="eyebrow">Equipment</span>
-            <h2 className="mt-1.5 text-xl font-bold text-slate-900 sm:mt-2 sm:text-3xl md:text-4xl">Manufacturing machines</h2>
+            <h2 className="mt-1.5 text-xl font-bold text-slate-900 sm:mt-2 sm:text-3xl md:text-4xl">Manufacturing Equipment</h2>
           </div>
 
           <div className="mt-4 grid gap-4 sm:mt-8 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -121,11 +121,25 @@ export default function ManufacturingPage() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-8 border-t border-slate-200 pt-6 sm:mt-16 sm:pt-8">
+        {/* CTA & Internal Linking */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 pt-6 sm:mt-16 sm:pt-8">
           <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 bg-[#0b4267] px-6 text-base font-bold text-white hover:bg-[#083653]">
             Discuss a Requirement <ArrowRight className="h-5 w-5" />
           </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/products"
+              className="text-sm font-semibold text-[#0b4267] hover:underline"
+            >
+              View Products &rarr;
+            </Link>
+            <Link
+              href="/quality"
+              className="text-sm font-semibold text-[#0b4267] hover:underline"
+            >
+              Quality &amp; Inspection &rarr;
+            </Link>
+          </div>
         </div>
       </div>
     </>

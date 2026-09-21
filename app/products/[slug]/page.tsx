@@ -43,7 +43,7 @@ const productDetails: Record<
     description:
       "Precision internal round broaches, combination & interspaced spline broaches, across flat, double-D, hexagonal, and special profile broaches up to 200 mm diameter and 2000 mm length.",
     manufacturing:
-      "Round broach sharpening is supported by the listed dedicated machine capacity of up to 200 mm diameter and 2000 mm length, with TOS cylindrical grinding and MC3 spline grinding capabilities also listed in the company profile.",
+      "Round broach manufacturing handles components up to 200 mm diameter and 2000 mm length, supported by dedicated machinery, TOS cylindrical grinding, and MC3 spline grinding capabilities.",
     applications: [
       "Spline Broaches",
       "Across Flat Broaches",
@@ -88,9 +88,9 @@ const productDetails: Record<
   "tooling-accessories-sharpening": {
     title: "Tooling Accessories & Cutter Sharpening",
     description:
-      "Broach resharpening and regrinding supported by 4 imported machines (Arthur Klink, Pentagon Grd-4, Lapointe Grd-5), along with sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions.",
+      "Broach resharpening and regrinding supported by dedicated imported machines (Arthur Klink, Pentagon, Lapointe), alongside sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions.",
     manufacturing:
-      "Our setup includes 4 imported broach resharpening machines: 1 dedicated for flat broaches (up to 1500 mm), 1 dedicated for round broaches (up to 200 mm dia & 2000 mm length), and 2 dedicated for new broach manufacturing.",
+      "Our setup includes dedicated imported broach resharpening machines for flat broaches (up to 1500 mm), round broaches (up to 200 mm dia & 2000 mm length), and new broach manufacturing.",
     applications: [
       "Broach Resharpening & Regrinding (Arthur Klink, Pentagon, Lapointe)",
       "Gear Shaving Cutter Sharpening",
@@ -112,6 +112,29 @@ const productDetails: Record<
   },
 };
 
+const productMeta: Record<string, { title: string; description: string }> = {
+  "flat-broaches": {
+    title: "Flat Broach Manufacturer in Chakan | Varad Engineering",
+    description:
+      "High-precision flat broaches up to 1500 mm length manufactured by Varad Engineering in Chakan, Pune, including key broaches with and without chamfer and surface broaches.",
+  },
+  "round-broaches": {
+    title: "Round Broach Manufacturer in Pune | Varad Engineering",
+    description:
+      "Internal round broaches and spline broaches up to 200 mm diameter and 2000 mm length manufactured by Varad Engineering in Mhalunge, Chakan, Pune.",
+  },
+  "contract-broaching": {
+    title: "Contract Broaching Services in Chakan | Varad Engineering",
+    description:
+      "Contract broaching services by Varad Engineering in Chakan, Pune, supported by precision inspection and batch machining capabilities.",
+  },
+  "tooling-accessories-sharpening": {
+    title: "Broach Regrinding & Cutter Sharpening Chakan | Varad Engineering",
+    description:
+      "Broach resharpening, regrinding and cutter sharpening by Varad Engineering in Mhalunge, Chakan, Pune using imported machinery.",
+  },
+};
+
 export function generateStaticParams() {
   return productCategories.map((product) => ({ slug: product.slug }));
 }
@@ -122,11 +145,14 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const meta = productMeta[slug];
   const detail = productDetails[slug];
 
   return {
-    title: detail?.title || "Product",
-    description: detail?.description || "High-precision broach and tooling solutions from Varad Engineering.",
+    title: {
+      absolute: meta?.title || `${detail?.title} | Varad Engineering Chakan`,
+    },
+    description: meta?.description || detail?.description || "High-precision broach and tooling solutions from Varad Engineering.",
     alternates: { canonical: `/products/${slug}` },
   };
 }
@@ -269,6 +295,30 @@ export default async function ProductDetailPage({
                 />
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Supporting Navigation */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 pt-8">
+          <Link
+            href="/products"
+            className="text-sm font-semibold text-[#0b4267] hover:underline"
+          >
+            &larr; All Products &amp; Services
+          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/manufacturing"
+              className="text-sm font-semibold text-[#0b4267] hover:underline"
+            >
+              Manufacturing Capabilities &rarr;
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm font-bold text-amber-700 hover:underline"
+            >
+              Contact Varad Engineering &rarr;
+            </Link>
           </div>
         </div>
       </div>

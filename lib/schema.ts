@@ -11,18 +11,15 @@ export const localBusinessSchema = {
     "Varad Engineering Broach Manufacturing Unit",
     "Varad Engineering Mhalunge",
     "Varad Engineering Pune",
-    "Varad Engineering Broach Unit",
-    "Varad Engineering MIDC Chakan",
   ],
   disambiguatingDescription:
-    "Varad Engineering (Broach Manufacturing Unit) located in Mhalunge, Chakan, Tal. Khed, Dist. Pune (GSTIN: 27BMEPT8875K1Z2). Specializing in high-precision flat broaches up to 1500mm, round spline broaches up to 200mm dia x 2000mm length, contract broaching, and tool resharpening. Note: Distinct from valve traders, forging manufacturers, or fire safety suppliers.",
+    "Varad Engineering (Broach Manufacturing Unit) located in Mhalunge, Chakan, Tal. Khed, Dist. Pune, Maharashtra (GSTIN: 27BMEPT8875K1Z2). Specializing in precision flat broaches up to 1500mm, round spline broaches up to 2000mm, contract broaching, and tool resharpening.",
   url: `https://${company.domain}`,
   logo: `https://${company.domain}/images/varad/cnc.jpg`,
   image: `https://${company.domain}/images/varad/hero-bg.jpg`,
   description:
-    "Varad Engineering is an independent premier Broach Manufacturing Unit in Mhalunge, Chakan, Pune. Specializing in high-precision flat broaches up to 1500mm, round broaches up to 200mm dia x 2000mm length, contract broaching, gear shaving cutter sharpening, and hob sharpening.",
+    "Varad Engineering is a specialized Broach Manufacturing Unit in Mhalunge, Chakan, Pune (GSTIN: 27BMEPT8875K1Z2). Specialists in precision flat broaches up to 1500mm, round broaches up to 2000mm, contract broaching, and tool regrinding.",
   telephone: company.phone,
-  email: company.email || "varadengineeringg@gmail.com",
   vatID: company.gstin,
   taxID: company.gstin,
   foundingDate: "2018",
@@ -40,14 +37,6 @@ export const localBusinessSchema = {
     latitude: 18.7606,
     longitude: 73.8617,
   },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "09:00",
-      closes: "18:30",
-    },
-  ],
   areaServed: [
     { "@type": "Place", name: "Chakan" },
     { "@type": "Place", name: "Mhalunge" },
@@ -61,20 +50,26 @@ export const localBusinessSchema = {
     { "@type": "Place", name: "Maharashtra" },
     { "@type": "Place", name: "India" },
   ],
-  priceRange: "$$$",
   knowsAbout: [
     "Broach Manufacturing",
     "Flat Broaches",
     "Round Broaches",
+    "Spline Broaches",
     "Keyway Broaches with Chamfer",
-    "Surface Broaches up to 1500 mm",
+    "Surface Broaches",
     "Spline Broaches",
     "Involute Spline Broaches",
     "Across Flat Broaches",
     "Double D Broaches",
     "Hexagonal Broaches",
     "Contract Broaching Services",
+    "Contract Broaching",
+    "Broach Resharpening",
     "Broach Regrinding",
+    "Surface Grinding",
+    "Cylindrical Grinding",
+    "Spline Grinding",
+    "Quality Inspection",
     "Broach Resharpening Chakan",
     "Gear Shaving Cutter Sharpening",
     "Shaping Cutter Sharpening",
@@ -82,6 +77,10 @@ export const localBusinessSchema = {
     "Carbide Tooling Solutions for CNCs",
     "Hoffler CNC Gear Tester ZP 260",
     "KAPP NILES CNC Gear Tester KNM 2X",
+    "Profile Projection 10x 20x 30x",
+    "Grade A Slip Gauges",
+    "Inspection Pin Rollers 0.75 to 10 mm",
+    "FIE Group Hardness Tester RASN",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -116,22 +115,18 @@ export const localBusinessSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Broach Resharpening & Regrinding",
-          description: "Supported by 4 imported machines including Arthur Klink, Pentagon, and Lapointe.",
+          description: "Supported by dedicated imported machines including Arthur Klink, Pentagon, and Lapointe.",
         },
       },
     ],
   },
-  sameAs: [
-    `https://${company.domain}`,
-    `https://www.google.com/maps?cid=18.7606,73.8617`,
-  ],
 };
 
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `https://${company.domain}/#website`,
-  name: "Varad Engineering | Broach Manufacturer Chakan Pune",
+  name: "Varad Engineering | Broach Manufacturer in Chakan, Pune",
   alternateName: [
     "Varad Engineering Chakan",
     "Varad Engineering Pune",
@@ -155,7 +150,6 @@ export function breadcrumbSchema(items: Array<{ name: string; url: string }>) {
     })),
   };
 }
-
 export const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -218,4 +212,5 @@ export const faqSchema = {
     },
   ],
 };
+
 

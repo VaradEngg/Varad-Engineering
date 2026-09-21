@@ -5,9 +5,9 @@ import { productCategories, company } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Products & Services | Varad Engineering Broach Unit Chakan",
+  title: "Broaches & Tooling Solutions | Varad Engineering Chakan",
   description:
-    "Explore Varad Engineering's complete range of Flat Broaches up to 1500mm, Round Broaches up to 2000mm, Contract Broaching, and Cutter Sharpening in Chakan, Pune.",
+    "Explore precision flat broaches, round broaches, contract broaching, broach regrinding and tooling solutions from Varad Engineering in Chakan, Pune.",
   alternates: { canonical: "/products" },
 };
 
@@ -40,7 +40,7 @@ export default function ProductsPage() {
             High Precision Broaching &amp; Tooling Solutions
           </h1>
           <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
-            From new flat and round broach fabrication to contract broaching and regrinding, Varad Engineering delivers complete tooling solutions backed by quality inspection.
+            Varad Engineering manufactures precision flat and round broaches and provides contract broaching, broach regrinding and related tooling solutions for the mechanical manufacturing industry.
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function ProductsPage() {
 
                 <div className="mt-6 space-y-2 border-t border-slate-100 pt-4">
                   <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                    Product Variants &amp; Operations:
+                    Types &amp; Capabilities:
                   </span>
                   <ul className="space-y-1.5 text-sm text-slate-700">
                     {product.items.map((item) => (
@@ -93,6 +93,27 @@ export default function ProductsPage() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Supporting Navigation Links */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 pt-8">
+          <p className="text-sm text-slate-600">
+            Need custom broach tooling backed by dedicated equipment and quality inspection?
+          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/manufacturing"
+              className="text-sm font-semibold text-[#0b4267] hover:underline"
+            >
+              Manufacturing Capabilities &rarr;
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm font-bold text-amber-700 hover:underline"
+            >
+              Contact Varad Engineering &rarr;
+            </Link>
+          </div>
         </div>
       </div>
     </>

@@ -16,7 +16,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/varad/hero-bg.jpg"
-          alt="CNC machining at Varad Engineering"
+          alt="CNC machining workshop at Varad Engineering in Chakan, Pune"
           fill
           priority
           quality={80}
@@ -34,7 +34,7 @@ export function Hero() {
             <div className="mb-3 flex items-center gap-2.5 sm:mb-4 sm:gap-3">
               <span className="h-[2px] w-6 bg-amber-400 sm:w-10" />
               <span className="text-xs font-bold uppercase tracking-[0.16em] text-amber-400 sm:text-sm sm:tracking-[0.2em]">
-                Varad Engineering &bull; Chakan, Pune
+                Varad Engineering &bull; Broach Manufacturing Unit &bull; Chakan, Pune
               </span>
             </div>
 
@@ -44,7 +44,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-3.5 max-w-xl text-sm leading-relaxed text-slate-200 sm:mt-5 sm:text-base lg:text-lg sm:leading-7">
-              Specialized broach manufacturing unit in Mhalunge, Chakan. We manufacture custom flat broaches up to 1500 mm, round broaches up to 2000 mm, alongside contract broaching and tool regrinding.
+              Specialized broach manufacturing unit in Mhalunge, Chakan. We manufacture flat broaches up to 1500 mm length and round broaches up to 200 mm diameter and 2000 mm length, along with contract broaching and broach regrinding.
             </p>
 
             {/* CTA BUTTONS */}

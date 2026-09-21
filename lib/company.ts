@@ -2,15 +2,15 @@ export const company = {
   name: "Varad Engineering",
   unitName: "Broach Manufacturing Unit",
   domain: process.env.NEXT_PUBLIC_SITE_DOMAIN || "varadengineeringchakan.com",
-  tagline: "High-precision broach and tooling solutions for the mechanical industry",
+  tagline: "Precision broach manufacturing and tooling solutions",
   address: "G.NO: 134 / 2 B H NO.10",
-  city: "Mhalunge, Chakan Tal. Khed",
-  state: "Dist. Pune",
+  city: "Mhalunge, Chakan, Tal. Khed",
+  state: "Dist. Pune, Maharashtra",
   pincode: "410501",
   country: "India",
   phone: "+91 7774038964",
   phoneDisplay: "7774038964",
-  email: "varadengineeringg@gmail.com",
+  email: "",
   gstin: "27BMEPT8875K1Z2",
   incorporatedYear: "2018 – 2019",
   team: {
@@ -65,7 +65,7 @@ export const qualityPolicy = {
   statement:
     "VARAD ENGINEERING is committed to providing quality work to our customers that meets the standards and specifications for materials, workmanship, accuracies, timeline and service while maintaining profitability and competitiveness.",
   commitment:
-    "VARAD ENGINEERING ensures continual improvement through quality system, which are directed by a strong management team.",
+    "VARAD ENGINEERING ensures continual improvement through quality systems and rigorous inspection standards.",
 };
 
 export const navItems = [
@@ -124,60 +124,60 @@ export const productCategories = [
     slug: "tooling-accessories-sharpening",
     title: "Tooling Accessories & Cutter Sharpening",
     description:
-      "Broach resharpening and regrinding supported by four dedicated imported machines (Arthur Klink, Pentagon, Lapointe), alongside sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions.",
+      "Broach resharpening and regrinding supported by dedicated imported machines (Arthur Klink, Pentagon, Lapointe), alongside sharpening of gear shaving cutters, shaping cutters, hobs, and CNC carbide tooling solutions.",
     image: "/images/varad/arthur-klink.jpg",
     items: [
-      "Broach Resharpening / Regrinding (4 Dedicated Machines)",
+      "Broach Resharpening / Regrinding (Arthur Klink, Pentagon, Lapointe)",
       "Gear Shaving Cutter Sharpening",
       "Shaping Cutter Sharpening",
       "Hob Sharpening",
       "Carbide Tooling Solutions for CNCs",
       "Tooling Accessories",
     ],
-    capacity: "4 imported broach resharpening machines + cutter sharpening",
+    capacity: "Imported broach resharpening machines + cutter sharpening",
   },
 ];
 
 export const machinesList = [
   {
     name: "Broach Resharpening / Regrinding Machines",
-    makes: "Arthur Klink, Pentagon (Grd-4), Lapointe (Grd-5)",
+    makes: "Arthur Klink, Pentagon, Lapointe",
     image: "/images/varad/arthur-klink.jpg",
     details:
-      "4 Nos. total: 1 dedicated to flat broaches (up to 1500 mm), 1 dedicated to round broaches (up to 200 mm dia & 2000 mm length), and 2 dedicated to manufacturing new broaches.",
+      "Dedicated to flat broaches (up to 1500 mm), round broaches (up to 200 mm dia & 2000 mm length), and manufacturing new broaches.",
   },
   {
     name: "Cylindrical Grinding Machines",
-    makes: "TOS Make (2 Nos.)",
+    makes: "TOS Make",
     image: "/images/varad/cylindrical-grinding.jpg",
     details:
-      "2 Nos. capable of handling broaches up to 125 mm diameter and 1800 mm length.",
+      "Capable of handling broaches up to 125 mm diameter and 1800 mm length.",
   },
   {
     name: "Surface Grinding Machines",
-    makes: "ELB SCHLIFF (2 Nos.)",
+    makes: "ELB SCHLIFF",
     image: "/images/varad/surface-grinding.jpg",
     details:
-      "2 Nos. capable of handling flat broaches up to 1500 mm length.",
+      "Capable of handling flat broaches up to 1500 mm length.",
   },
   {
     name: "Spline Grinding Machine",
-    makes: "MC3 Russian (1 No.)",
+    makes: "MC3 Russian",
     image: "/images/varad/spline-grinding.jpg",
     details:
-      "1 No. capable of handling jobs up to 125 mm diameter and 2000 mm length.",
+      "Capable of handling jobs up to 125 mm diameter and 2000 mm length.",
   },
   {
     name: "Lathe Machine",
-    makes: "Precision Heavy Duty Lathe (1 No.)",
+    makes: "Precision Heavy Duty Lathe",
     image: "/images/varad/lathe.jpg",
-    details: "1 No. for pre-machining and broach shank turning.",
+    details: "For pre-machining and broach shank turning.",
   },
   {
     name: "Milling Machine",
-    makes: "Universal Milling Machine (1 No.)",
+    makes: "Universal Milling Machine",
     image: "/images/varad/broach-detail.jpg",
-    details: "1 No. supporting tooling accessories and profile pre-machining.",
+    details: "Supporting tooling accessories and profile pre-machining.",
   },
 ];
 

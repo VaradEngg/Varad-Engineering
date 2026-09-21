@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { company, qualityPolicy, inspectionFacilities } from "@/lib/company";
 import { breadcrumbSchema } from "@/lib/schema";
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Quality Policy & Inspection | Varad Engineering Broach Unit Chakan",
+  title: "Quality & Inspection | Varad Engineering Chakan",
   description:
-    "Inspection equipment at Varad Engineering Chakan: Hoffler CNC Gear Tester ZP 260, KAPP NILES KNM 2X, profile projector, Grade A slip gauges, and hardness tester.",
+    "Explore Varad Engineering's quality policy and inspection facilities in Chakan, Pune, including profile projection, CNC gear testing, slip gauges and hardness testing.",
   alternates: { canonical: "/quality" },
 };
 
@@ -32,10 +32,10 @@ export default function QualityPage() {
         <div className="mt-5 max-w-4xl sm:mt-8">
           <span className="eyebrow">Quality Policy</span>
           <h1 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:mt-4 sm:text-4xl md:text-5xl">
-            Quality, accuracy and inspection
+            Quality &amp; Inspection
           </h1>
           <p className="mt-3 text-sm leading-6 text-slate-600 sm:mt-6 sm:text-lg sm:leading-relaxed">
-            Varad Engineering&apos;s quality policy covers materials, workmanship, accuracies, timeline and service, with continual improvement through a quality system directed by a strong management team.
+            Varad Engineering&apos;s quality policy covers materials, workmanship, accuracies, timeline and service, ensuring continual improvement through structured quality systems and precision testing.
           </p>
         </div>
 
@@ -75,6 +75,27 @@ export default function QualityPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+
+        {/* CTA & Internal Linking */}
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 pt-6 sm:mt-16 sm:pt-8">
+          <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 bg-[#0b4267] px-6 text-base font-bold text-white hover:bg-[#083653]">
+            Discuss Inspection &amp; Tooling <ArrowRight className="h-5 w-5" />
+          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/manufacturing"
+              className="text-sm font-semibold text-[#0b4267] hover:underline"
+            >
+              Manufacturing Capabilities &rarr;
+            </Link>
+            <Link
+              href="/products"
+              className="text-sm font-semibold text-[#0b4267] hover:underline"
+            >
+              View Products &rarr;
+            </Link>
           </div>
         </div>
       </div>
