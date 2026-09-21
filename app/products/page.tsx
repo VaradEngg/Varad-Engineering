@@ -51,7 +51,7 @@ export default function ProductsPage() {
               className="relative flex flex-col justify-between overflow-hidden border border-slate-200 bg-white shadow-sm hover:border-amber-400 transition-all"
             >
               <div className="relative h-52 bg-slate-100">
-                <Image src={product.image} alt={product.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                <Image src={product.image} alt={product.title} fill quality={80} className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="p-5 sm:p-8">
                 <div className="flex items-center justify-between">

@@ -192,6 +192,9 @@ export default async function ProductDetailPage({
               src={productCategories.find((item) => item.slug === slug)?.image || "/images/varad/broaches.jpg"}
               alt={detail.title}
               fill
+              priority
+              quality={80}
+              sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover"
             />
           </div>
@@ -236,6 +239,7 @@ export default async function ProductDetailPage({
                       src={item.image}
                       alt={item.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover"
                     />
                   </div>
@@ -260,6 +264,7 @@ export default async function ProductDetailPage({
                   src={image}
                   alt={`${detail.title} ${index + 1}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
               </div>

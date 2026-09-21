@@ -88,7 +88,7 @@ export default function ManufacturingPage() {
               className="overflow-hidden border border-slate-200 bg-white shadow-sm"
             >
               <div className="relative h-40 sm:h-48 bg-slate-100">
-                <Image src={item.image} alt={item.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                <Image src={item.image} alt={item.title} fill quality={80} className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
               </div>
               <div className="p-4 sm:p-6">
                 <h2 className="text-lg font-bold text-slate-900 sm:text-xl">{item.title}</h2>
@@ -109,7 +109,7 @@ export default function ManufacturingPage() {
             {machinesList.map((machine) => (
               <article key={machine.name} className="overflow-hidden border border-slate-200 bg-white shadow-sm">
                 <div className="relative h-40 sm:h-52 bg-slate-100">
-                  <Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                  <Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill quality={80} className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                 </div>
                 <div className="p-4 sm:p-6">
                   <p className="text-xs font-bold text-amber-700 sm:text-sm">{machine.makes}</p>

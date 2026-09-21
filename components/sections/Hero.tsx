@@ -19,6 +19,7 @@ export function Hero() {
           alt="CNC machining at Varad Engineering"
           fill
           priority
+          quality={80}
           className="object-cover object-center"
           sizes="100vw"
         />

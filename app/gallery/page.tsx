@@ -63,7 +63,7 @@ export default function GalleryPage() {
               {productImages.map((image) => (
                 <figure key={image.src} className="group overflow-hidden border border-slate-200 bg-white">
                   <div className="relative aspect-[4/3] bg-slate-100">
-                    <Image src={image.src} alt={image.alt} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 25vw" />
+                    <Image src={image.src} alt={image.alt} fill quality={80} className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, 25vw" />
                   </div>
                   <figcaption className="p-3 text-sm font-bold text-slate-900 sm:p-4 sm:text-base">{image.title}</figcaption>
                 </figure>
@@ -80,7 +80,7 @@ export default function GalleryPage() {
               {workshopImages.map((image) => (
                 <figure key={image.src} className="group overflow-hidden border border-slate-200 bg-white">
                   <div className="relative aspect-[16/9] bg-slate-100">
-                    <Image src={image.src} alt={image.alt} fill className="object-cover transition duration-500 group-hover:scale-[1.02]" sizes="(max-width: 768px) 100vw, 50vw" />
+                    <Image src={image.src} alt={image.alt} fill quality={80} className="object-cover transition duration-500 group-hover:scale-[1.02]" sizes="(max-width: 768px) 100vw, 50vw" />
                   </div>
                   <figcaption className="p-3 text-sm font-bold text-slate-900 sm:p-4 sm:text-base">{image.title}</figcaption>
                 </figure>
@@ -97,7 +97,7 @@ export default function GalleryPage() {
               {machinesList.map((machine) => (
                 <figure key={machine.name} className="overflow-hidden border border-slate-200 bg-white">
                   <div className="relative h-40 sm:h-52 bg-slate-100">
-                    <Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
+                    <Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill quality={80} className="object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
                   </div>
                   <figcaption className="p-4 sm:p-5">
                     <p className="text-xs font-bold text-amber-700 sm:text-sm">{machine.makes}</p>
@@ -117,7 +117,7 @@ export default function GalleryPage() {
               {inspectionFacilities.map((item) => (
                 <figure key={`${item.name}-${item.spec}`} className="overflow-hidden border border-slate-200 bg-white">
                   <div className="relative h-40 sm:h-52 bg-slate-100">
-                    <Image src={item.image} alt={`${item.name} at Varad Engineering`} fill className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
+                    <Image src={item.image} alt={`${item.name} at Varad Engineering`} fill quality={80} className="object-cover" sizes="(max-width: 640px) 100vw, 33vw" />
                   </div>
                   <figcaption className="p-4 sm:p-5">
                     <p className="text-xs font-bold text-amber-700 sm:text-sm">{item.spec}</p>

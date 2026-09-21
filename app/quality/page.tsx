@@ -59,7 +59,14 @@ export default function QualityPage() {
             {inspectionFacilities.map((facility) => (
               <article key={`${facility.name}-${facility.spec}`} className="overflow-hidden border border-slate-200 bg-white shadow-sm">
                 <div className="relative h-40 sm:h-48 bg-slate-200">
-                  <Image src={facility.image} alt={`${facility.name} inspection equipment`} fill className="object-cover" />
+                  <Image
+                    src={facility.image}
+                    alt={`${facility.name} inspection equipment`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    quality={80}
+                    className="object-cover"
+                  />
                 </div>
                 <div className="p-4 sm:p-6">
                   <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-700 sm:text-xs">{facility.spec}</span>

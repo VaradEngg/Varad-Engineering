@@ -48,7 +48,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative min-h-[240px] overflow-hidden border border-slate-200 bg-slate-100 sm:min-h-[380px]">
-            <Image src="/images/varad/cnc.jpg" alt="Varad Engineering workshop and manufacturing facility" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 45vw" />
+            <Image src="/images/varad/cnc.jpg" alt="Varad Engineering workshop and manufacturing facility" fill quality={80} className="object-cover" sizes="(max-width: 1024px) 100vw, 45vw" />
           </div>
         </div>
 
