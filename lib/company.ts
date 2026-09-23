@@ -1,7 +1,9 @@
 export const company = {
   name: "Varad Engineering",
   unitName: "Broach Manufacturing Unit",
-  domain: process.env.NEXT_PUBLIC_SITE_DOMAIN || "varadengg.co.in",
+  domain: (process.env.NEXT_PUBLIC_SITE_DOMAIN || "varadengg.co.in")
+    .replace(/^https?:\/\//, "")
+    .replace(/\/+$/, ""),
   tagline: "Precision broach manufacturing and tooling solutions",
   address: "G.NO: 134 / 2 B H NO.10",
   city: "Mhalunge, Chakan, Tal. Khed",
@@ -25,6 +27,60 @@ export const company = {
     instagram: "",
   },
 };
+
+export const productLinks = [
+  {
+    href: "/products/flat-broaches",
+    label: "Flat Broaches",
+    description: "Key broaches with & without chamfer and surface broaches up to 1500 mm.",
+  },
+  {
+    href: "/products/round-broaches",
+    label: "Round Broaches",
+    description: "Internal spline, double-D, hexagonal & profile broaches up to 200 mm dia.",
+  },
+  {
+    href: "/products/keyway-broaches",
+    label: "Keyway Broaches",
+    description: "Precision key broaches with and without chamfer for internal slots.",
+  },
+  {
+    href: "/products/spline-broaches",
+    label: "Spline Broaches",
+    description: "Combination and interspaced spline broaches for driveline & gears.",
+  },
+  {
+    href: "/products/surface-broaches",
+    label: "Surface Broaches",
+    description: "External flat and surface profile broaches up to 1500 mm length.",
+  },
+];
+
+export const serviceLinks = [
+  {
+    href: "/products/contract-broaching",
+    label: "Contract Broaching",
+    description: "Batch broaching work backed by CNC gear inspection and slip gauges.",
+  },
+  {
+    href: "/services/broach-regrinding-resharpening",
+    label: "Broach Regrinding & Resharpening",
+    description: "Precision regrinding and face resharpening on imported machinery.",
+  },
+];
+
+export const applicationLinks = [
+  {
+    href: "/applications/keyway-machining",
+    label: "Keyway Machining",
+    description: "Internal keyway cutting for gears, sprockets, pulleys & couplings.",
+  },
+  {
+    href: "/applications/spline-machining",
+    label: "Spline Machining",
+    description: "High-accuracy internal spline production for automotive transmissions.",
+  },
+];
 
 export const vision = {
   title: "Our Vision",

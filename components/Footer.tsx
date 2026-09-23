@@ -6,13 +6,14 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-950 text-slate-200">
       <div className="container-shell py-10 sm:py-14 lg:py-16">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
-          <div className="col-span-2 lg:col-span-1">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
+          {/* Brand Info */}
+          <div className="col-span-2 sm:col-span-1 lg:col-span-1">
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center border border-slate-700 bg-white text-sm font-bold text-slate-950">
                 VE
               </div>
-              <div className="sm:order-3">
+              <div>
                 <div className="text-base font-semibold tracking-[0.22em] text-white">
                   VARAD
                 </div>
@@ -21,79 +22,89 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <p className="mt-5 max-w-md text-sm text-slate-300">
-              High-precision broach manufacturing and tooling solutions for the mechanical industry.
+            <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-amber-400">
+              Broach Manufacturing Unit
+            </p>
+            <p className="mt-3 max-w-sm text-sm text-slate-300 leading-relaxed">
+              Precision flat and round broaches, contract broaching, broach regrinding/resharpening, and tooling solutions for the mechanical industry from Mhalunge, Chakan, Pune.
             </p>
           </div>
 
+          {/* Products Column */}
           <div className="col-span-1">
             <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
-              Navigation
+              Products
             </h3>
-            <ul className="mt-5 space-y-3 text-sm text-slate-300">
-              {navItems
-                .filter((item) => item.href !== "/products")
-                .map((item) => (
-                  <li key={item.href}>
-                    <Link href={item.href} className="hover:text-white">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
+            <ul className="mt-5 space-y-2.5 text-sm text-slate-300">
               <li>
-                <Link href="/privacy-policy" className="hover:text-white">
-                  Privacy policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="col-span-1">
-            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
-              Products & Services
-            </h3>
-            <ul className="mt-5 space-y-3 text-sm text-slate-300">
-              <li>
-                <Link
-                  href="/products/flat-broaches"
-                  className="hover:text-white"
-                >
+                <Link href="/products/flat-broaches" className="hover:text-white transition-colors">
                   Flat Broaches
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/products/round-broaches"
-                  className="hover:text-white"
-                >
+                <Link href="/products/round-broaches" className="hover:text-white transition-colors">
                   Round Broaches
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/products/contract-broaching"
-                  className="hover:text-white"
-                >
-                  Contract Broaching
+                <Link href="/products/keyway-broaches" className="hover:text-white transition-colors">
+                  Keyway Broaches
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/products/tooling-accessories-sharpening"
-                  className="hover:text-white"
-                >
-                  Tooling & Resharpening
+                <Link href="/products/spline-broaches" className="hover:text-white transition-colors">
+                  Spline Broaches
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/surface-broaches" className="hover:text-white transition-colors">
+                  Surface Broaches
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div className="col-span-2 lg:col-span-1">
+          {/* Services & Applications Column */}
+          <div className="col-span-1">
             <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
-              Contact & Address
+              Services &amp; Applications
+            </h3>
+            <ul className="mt-5 space-y-2.5 text-sm text-slate-300">
+              <li>
+                <Link href="/products/contract-broaching" className="hover:text-white transition-colors">
+                  Contract Broaching
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/broach-regrinding-resharpening" className="hover:text-white transition-colors">
+                  Broach Regrinding &amp; Resharpening
+                </Link>
+              </li>
+              <li>
+                <Link href="/applications/keyway-machining" className="hover:text-white transition-colors">
+                  Keyway Machining
+                </Link>
+              </li>
+              <li>
+                <Link href="/applications/spline-machining" className="hover:text-white transition-colors">
+                  Spline Machining
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/tooling-accessories-sharpening" className="hover:text-white transition-colors">
+                  Tooling &amp; Cutter Sharpening
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact & Address Column */}
+          <div className="col-span-2 sm:col-span-1 lg:col-span-1">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">
+              Contact &amp; Location
             </h3>
             <div className="mt-5 space-y-3 text-sm text-slate-300">
-              <div className="text-xs font-semibold text-amber-400">
+              <div className="text-xs font-semibold text-amber-400 font-mono">
                 GSTIN: {company.gstin}
               </div>
               <div className="flex gap-3">
@@ -110,23 +121,37 @@ export function Footer() {
                   </a>
                 </div>
               ) : null}
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-slate-300 pt-1"
-              >
-                Enquire today <ArrowUpRight className="h-4 w-4" />
-              </Link>
+              <div className="pt-2">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-amber-300 transition-colors"
+                >
+                  Enquire today <ArrowUpRight className="h-4 w-4" />
+                </Link>
+              </div>
+              <div className="pt-2 border-t border-slate-800 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400">
+                {navItems
+                  .filter((item) => item.href !== "/" && item.href !== "/products")
+                  .map((item) => (
+                    <Link key={item.href} href={item.href} className="hover:text-white">
+                      {item.label}
+                    </Link>
+                  ))}
+                <Link href="/privacy-policy" className="hover:text-white">
+                  Privacy Policy
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-slate-800 pt-6 text-center text-sm text-slate-400 sm:mt-12 md:flex-row md:justify-between md:text-left">
           <p>
-            © {new Date().getFullYear()} {company.name}. All rights reserved.
+            © {new Date().getFullYear()} {company.name} ({company.unitName}). All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <p className="text-xs tracking-[0.08em] text-slate-500">
-              Designed &amp; developed by BeeCreativess.
+              Broach Manufacturing Unit · Mhalunge, Chakan, Pune
             </p>
           </div>
         </div>

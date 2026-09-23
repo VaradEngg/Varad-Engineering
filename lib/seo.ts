@@ -14,7 +14,9 @@ export function buildMetadata({
   const url = `https://${company.domain}${path}`;
 
   return {
-    title,
+    title: {
+      absolute: title,
+    },
     description,
     alternates: { canonical: path },
     openGraph: {
