@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { company, navItems } from "@/lib/company";
 
@@ -9,19 +10,15 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
           {/* Brand Info */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center border border-slate-700 bg-white text-sm font-bold text-slate-950">
-                VE
-              </div>
-              <div>
-                <div className="text-base font-semibold tracking-[0.22em] text-white">
-                  VARAD
-                </div>
-                <div className="text-[10px] tracking-[0.24em] text-slate-400">
-                  ENGINEERING
-                </div>
-              </div>
-            </div>
+            <Link href="/" className="inline-block py-1" aria-label="Varad Engineering home">
+              <Image
+                src="/images/varad/logo-horizontal-white.png"
+                alt="Varad Engineering - Broach Manufacturing Unit"
+                width={220}
+                height={68}
+                className="h-11 w-auto object-contain sm:h-12"
+              />
+            </Link>
             <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-amber-400">
               Broach Manufacturing Unit
             </p>
@@ -145,14 +142,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 border-t border-slate-800 pt-6 text-center text-sm text-slate-400 sm:mt-12 md:flex-row md:justify-between md:text-left">
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-6 text-center text-xs text-slate-400 sm:mt-12 md:flex-row md:text-left">
           <p>
             © {new Date().getFullYear()} {company.name} ({company.unitName}). All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            <p className="text-xs tracking-[0.08em] text-slate-500">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <span className="text-slate-500">
               Broach Manufacturing Unit · Mhalunge, Chakan, Pune
-            </p>
+            </span>
+            <span className="hidden text-slate-700 md:inline">|</span>
+            <span className="text-slate-400">
+              Designed & Developed by{" "}
+              <span className="font-semibold text-slate-200">BeeCreativess</span>
+            </span>
           </div>
         </div>
       </div>

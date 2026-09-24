@@ -15,7 +15,7 @@ export const localBusinessSchema = {
   disambiguatingDescription:
     "Varad Engineering (Broach Manufacturing Unit) located in Mhalunge, Chakan, Tal. Khed, Dist. Pune, Maharashtra (GSTIN: 27BMEPT8875K1Z2). Specializing in precision flat broaches up to 1500mm, round spline broaches up to 2000mm, contract broaching, and tool resharpening.",
   url: `https://${company.domain}`,
-  logo: `https://${company.domain}/images/varad/cnc.jpg`,
+  logo: `https://${company.domain}/images/varad/logo.png`,
   image: `https://${company.domain}/images/varad/hero-bg.jpg`,
   description:
     "Varad Engineering is a specialized Broach Manufacturing Unit in Mhalunge, Chakan, Pune (GSTIN: 27BMEPT8875K1Z2). Specialists in precision flat broaches up to 1500mm, round broaches up to 2000mm, contract broaching, and tool regrinding.",

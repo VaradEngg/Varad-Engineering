@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -80,20 +81,17 @@ export function Header() {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }
             }}
-            className="flex shrink-0 items-center gap-3"
+            className="flex shrink-0 items-center py-2"
             aria-label="Varad Engineering home"
           >
-            <div className="flex h-12 w-12 items-center justify-center border-2 border-[#0a3858] text-[#0a3858]">
-              <span className="text-lg font-black tracking-[-0.12em]">VE</span>
-            </div>
-            <div>
-              <div className="text-xl font-black tracking-[0.12em] text-[#0a3858]">
-                VARAD
-              </div>
-              <div className="text-[10px] font-bold tracking-[0.28em] text-slate-500">
-                ENGINEERING
-              </div>
-            </div>
+            <Image
+              src="/images/varad/logo-horizontal.png"
+              alt="Varad Engineering - Broach Manufacturing Unit"
+              width={220}
+              height={68}
+              priority
+              className="h-11 w-auto object-contain sm:h-12"
+            />
           </Link>
 
           {/* Desktop Navigation */}
