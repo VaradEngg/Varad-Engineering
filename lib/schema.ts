@@ -130,6 +130,7 @@ export const websiteSchema = {
   alternateName: [
     "Varad Engineering Chakan",
     "Varad Engineering Pune",
+    "Varad Engineering",
     "Varad Engineering Broach Manufacturing Unit",
   ],
   url: `https://${company.domain}`,
