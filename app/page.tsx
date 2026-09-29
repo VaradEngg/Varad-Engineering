@@ -21,33 +21,6 @@ export default function HomePage() {
       <main>
         <Hero />
 
-        {/* Verified Plant Identity & Local Anchor Strip */}
-        <section className="border-b border-slate-200 bg-slate-900 py-3.5 text-white">
-          <div className="container-shell flex flex-wrap items-center justify-between gap-y-2 gap-x-6 text-xs sm:text-sm">
-            <div className="flex items-center gap-2">
-              <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-semibold text-white">
-                Varad Engineering
-              </span>
-              <span className="text-slate-400">&bull;</span>
-              <span className="font-semibold tracking-wide text-amber-300 uppercase text-[11px] sm:text-xs">
-                Broach Manufacturing Unit
-              </span>
-              <span className="text-slate-400 hidden sm:inline">&bull;</span>
-              <span className="text-slate-200 font-medium">
-                Mhalunge, Chakan, Tal. Khed, Pune – 410501
-              </span>
-            </div>
-            <div className="flex items-center gap-4 text-slate-300 text-xs">
-              <span>GSTIN: <strong className="text-white font-mono">{company.gstin}</strong></span>
-              <span className="text-slate-600">&bull;</span>
-              <a href={`tel:${company.phone}`} className="font-semibold text-amber-400 hover:underline">
-                {company.phoneDisplay}
-              </a>
-            </div>
-          </div>
-        </section>
-
       {/* What We Make */}
       <section className="border-y border-slate-200 bg-[#eef4f8] py-8 sm:py-16 lg:py-20">
         <div className="container-shell">

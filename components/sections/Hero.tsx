@@ -1,13 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  MapPin,
-  Phone,
-  Ruler,
-  Settings2,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowRight, Ruler, Settings2, ShieldCheck } from "lucide-react";
 
 export function Hero() {
   return (
@@ -31,13 +24,6 @@ export function Hero() {
         <div className="flex items-center">
           {/* CONTENT */}
           <div className="max-w-2xl">
-            <div className="mb-3 flex items-center gap-2.5 sm:mb-4 sm:gap-3">
-              <span className="h-[2px] w-6 bg-amber-400 sm:w-10" />
-              <span className="text-xs font-bold uppercase tracking-[0.16em] text-amber-400 sm:text-sm sm:tracking-[0.2em]">
-                Varad Engineering &bull; Broach Manufacturing Unit &bull; Chakan, Pune
-              </span>
-            </div>
-
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl lg:text-[44px]">
               Precision Broach Manufacturer in{" "}
               <span className="text-amber-400">Chakan, Pune</span>
@@ -47,8 +33,8 @@ export function Hero() {
               Specialized broach manufacturing unit in Mhalunge, Chakan. We manufacture flat broaches up to 1500 mm length and round broaches up to 200 mm diameter and 2000 mm length, along with contract broaching and broach regrinding.
             </p>
 
-            {/* CTA BUTTONS */}
-            <div className="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:gap-3">
+            {/* CTA BUTTON */}
+            <div className="mt-6 flex sm:mt-8">
               <Link
                 href="/products"
                 className="inline-flex min-h-[46px] items-center justify-center gap-2.5 bg-amber-400 px-6 text-sm font-bold text-slate-950 transition hover:bg-amber-300 sm:min-h-[50px] sm:px-7 sm:text-base"
@@ -56,31 +42,6 @@ export function Hero() {
                 View Products
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
-
-              <Link
-                href="/contact"
-                className="inline-flex min-h-[46px] items-center justify-center gap-2.5 border border-slate-400 bg-transparent px-6 text-sm font-bold text-white transition hover:border-white hover:bg-white hover:text-slate-900 sm:min-h-[50px] sm:px-7 sm:text-base"
-              >
-                Request an Enquiry
-              </Link>
-            </div>
-
-            {/* CONTACT INFO */}
-            <div className="mt-6 flex flex-col gap-2.5 text-xs font-semibold sm:mt-8 sm:flex-row sm:items-center sm:gap-7 sm:text-sm lg:text-base">
-              <a
-                href="tel:+917774038964"
-                className="flex items-center gap-2 hover:text-amber-400 sm:gap-3"
-              >
-                <Phone className="h-4 w-4 text-amber-400 sm:h-5 sm:w-5" />
-                7774038964
-              </a>
-
-              <span className="hidden h-5 w-px bg-slate-600 sm:block" />
-
-              <div className="flex items-center gap-2 sm:gap-3">
-                <MapPin className="h-4 w-4 text-amber-400 sm:h-5 sm:w-5" />
-                Mhalunge, Chakan, Pune – 410501
-              </div>
             </div>
 
             {/* QUICK CAPABILITIES */}
