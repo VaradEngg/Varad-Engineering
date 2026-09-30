@@ -105,9 +105,9 @@ export default function ManufacturingPage() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    quality={80}
+                    quality={95}
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-4 sm:p-6">
@@ -220,9 +220,9 @@ export default function ManufacturingPage() {
                     src={machine.image}
                     alt={`${machine.name} at Varad Engineering`}
                     fill
-                    quality={80}
+                    quality={95}
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-4 sm:p-6">

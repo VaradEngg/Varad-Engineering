@@ -90,8 +90,8 @@ export default function KeywayBroachesPage() {
               alt="Precision keyway broaches manufactured by Varad Engineering"
               fill
               priority
-              quality={85}
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              quality={95}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -210,7 +210,7 @@ export default function KeywayBroachesPage() {
                 src="/images/varad/surface-grinding.jpg"
                 alt="ELB SCHLIFF surface grinding machine handling flat broaches at Varad Engineering"
                 fill
-                quality={80}
+                quality={95}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
@@ -277,7 +277,7 @@ export default function KeywayBroachesPage() {
                 src="/images/varad/broaches.jpg"
                 alt="Precision flat key broaches manufactured at Varad Engineering"
                 fill
-                quality={80}
+                quality={95}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
@@ -287,7 +287,7 @@ export default function KeywayBroachesPage() {
                 src="/images/varad/broach-detail.jpg"
                 alt="Detail view of broach teeth and cutting edges at Varad Engineering"
                 fill
-                quality={80}
+                quality={95}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />

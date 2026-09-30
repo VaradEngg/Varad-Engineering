@@ -90,6 +90,7 @@ export function Header() {
               width={220}
               height={68}
               priority
+              quality={95}
               className="h-11 w-auto object-contain sm:h-12"
             />
           </Link>

@@ -78,7 +78,7 @@ export default function QualityPage() {
                     alt={`${facility.name} inspection equipment`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    quality={80}
+                    quality={95}
                     className="object-cover"
                   />
                 </div>

@@ -12,7 +12,7 @@ export function Hero() {
           alt="CNC machining workshop at Varad Engineering in Chakan, Pune"
           fill
           priority
-          quality={80}
+          quality={95}
           className="object-cover object-center"
           sizes="100vw"
         />

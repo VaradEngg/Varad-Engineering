@@ -35,7 +35,7 @@ export default function HomePage() {
             {productCategories.map((product) => (
               <article key={product.slug} className="group overflow-hidden border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <div className="relative h-44 sm:h-52 overflow-hidden bg-slate-100">
-                  <Image src={product.image} alt={product.title} fill quality={90} className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 360px" />
+                  <Image src={product.image} alt={product.title} fill quality={95} className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 360px" />
                 </div>
                 <div className="p-4 sm:p-6">
                   <h3 className="text-xl font-bold text-[#092d49] sm:text-2xl">{product.title}</h3>
@@ -69,7 +69,7 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="relative min-h-[240px] overflow-hidden border border-slate-200 bg-slate-100 sm:min-h-[420px]">
-            <Image src="/images/varad/cylindrical-grinding.jpg" alt="Grinding facility at Varad Engineering" fill quality={90} className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+            <Image src="/images/varad/cylindrical-grinding.jpg" alt="Grinding facility at Varad Engineering" fill quality={95} className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
         </div>
       </section>
@@ -87,7 +87,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
             {machinesList.slice(0, 5).map((machine) => (
               <article key={machine.name} className="overflow-hidden border border-white/10 bg-[#0d3856]">
-                <div className="relative h-40 sm:h-48 bg-slate-800"><Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill quality={90} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" /></div>
+                <div className="relative h-40 sm:h-48 bg-slate-800"><Image src={machine.image} alt={`${machine.name} at Varad Engineering`} fill quality={95} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" /></div>
                 <div className="p-4 sm:p-6">
                   <div className="text-xs font-bold text-amber-300 sm:text-sm">{machine.makes}</div>
                   <h3 className="mt-1.5 text-lg font-bold text-white sm:mt-3 sm:text-xl">{machine.name}</h3>
@@ -111,7 +111,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {inspectionFacilities.slice(0, 4).map((facility) => (
               <article key={`${facility.name}-${facility.spec}`} className="overflow-hidden border border-slate-200 bg-[#f5f8fa]">
-                <div className="relative h-28 sm:h-36 bg-slate-100"><Image src={facility.image} alt={facility.name} fill quality={90} className="object-cover" sizes="(max-width: 640px) 100vw, 300px" /></div>
+                <div className="relative h-28 sm:h-36 bg-slate-100"><Image src={facility.image} alt={facility.name} fill quality={95} className="object-cover" sizes="(max-width: 640px) 100vw, 300px" /></div>
                 <div className="p-3 sm:p-4"><h3 className="text-sm font-bold text-[#092d49] sm:text-base">{facility.name}</h3><p className="mt-0.5 text-[11px] font-bold text-amber-700 sm:mt-1 sm:text-xs">{facility.spec}</p></div>
               </article>
             ))}
@@ -131,19 +131,19 @@ export default function HomePage() {
           </div>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="relative h-40 sm:h-56 overflow-hidden border border-slate-200 bg-slate-100">
-              <Image src="/images/varad/cnc.jpg" alt="Workshop at Varad Engineering" fill quality={90} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              <Image src="/images/varad/cnc.jpg" alt="Workshop at Varad Engineering" fill quality={95} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
               <div className="absolute bottom-0 left-0 right-0 bg-slate-950/70 px-3 py-1.5 text-xs font-bold text-white sm:px-4 sm:py-2.5 sm:text-sm">Workshop</div>
             </div>
             <div className="relative h-40 sm:h-56 overflow-hidden border border-slate-200 bg-slate-100">
-              <Image src="/images/varad/arthur-klink.jpg" alt="Broach resharpening machine at Varad Engineering" fill quality={90} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              <Image src="/images/varad/arthur-klink.jpg" alt="Broach resharpening machine at Varad Engineering" fill quality={95} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
               <div className="absolute bottom-0 left-0 right-0 bg-slate-950/70 px-3 py-1.5 text-xs font-bold text-white sm:px-4 sm:py-2.5 sm:text-sm">Machines</div>
             </div>
             <div className="relative h-40 sm:h-56 overflow-hidden border border-slate-200 bg-slate-100">
-              <Image src="/images/varad/broaches.jpg" alt="Precision broaches" fill quality={90} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              <Image src="/images/varad/broaches.jpg" alt="Precision broaches" fill quality={95} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
               <div className="absolute bottom-0 left-0 right-0 bg-slate-950/70 px-3 py-1.5 text-xs font-bold text-white sm:px-4 sm:py-2.5 sm:text-sm">Broaches</div>
             </div>
             <div className="relative h-40 sm:h-56 overflow-hidden border border-slate-200 bg-slate-100">
-              <Image src="/images/varad/profile-projector.jpg" alt="Profile projector inspection equipment" fill quality={90} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+              <Image src="/images/varad/profile-projector.jpg" alt="Profile projector inspection equipment" fill quality={95} className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
               <div className="absolute bottom-0 left-0 right-0 bg-slate-950/70 px-3 py-1.5 text-xs font-bold text-white sm:px-4 sm:py-2.5 sm:text-sm">Inspection</div>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
                     width={150}
                     height={80}
                     loading="lazy"
-                    quality={90}
+                    unoptimized
                     className="max-h-12 sm:max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
@@ -198,7 +198,7 @@ export default function HomePage() {
                     width={150}
                     height={80}
                     loading="lazy"
-                    quality={90}
+                    unoptimized
                     className="max-h-12 sm:max-h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

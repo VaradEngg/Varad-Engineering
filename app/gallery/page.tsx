@@ -113,9 +113,9 @@ export default function GalleryPage() {
                         src={image.src}
                         alt={image.alt}
                         fill
-                        quality={80}
+                        quality={95}
                         className="object-cover transition duration-500 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, 25vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                     </div>
                     <figcaption className="p-3 text-sm font-bold text-slate-900 sm:p-4 sm:text-base flex items-center justify-between">
@@ -149,7 +149,7 @@ export default function GalleryPage() {
                         src={image.src}
                         alt={image.alt}
                         fill
-                        quality={90}
+                        quality={95}
                         className="object-cover transition duration-500 group-hover:scale-[1.02]"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
@@ -185,9 +185,9 @@ export default function GalleryPage() {
                       src={machine.image}
                       alt={`${machine.name} at Varad Engineering`}
                       fill
-                      quality={80}
+                      quality={95}
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
                   <figcaption className="p-4 sm:p-5">
@@ -225,9 +225,9 @@ export default function GalleryPage() {
                       src={item.image}
                       alt={`${item.name} quality inspection equipment at Varad Engineering`}
                       fill
-                      quality={80}
+                      quality={95}
                       className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 33vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
                   <figcaption className="p-4 sm:p-5">

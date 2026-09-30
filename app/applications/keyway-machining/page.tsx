@@ -93,8 +93,8 @@ export default function KeywayMachiningPage() {
               alt="Precision keyway broaches for internal keyway machining manufactured by Varad Engineering"
               fill
               priority
-              quality={85}
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              quality={95}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -219,7 +219,7 @@ export default function KeywayMachiningPage() {
                 src="/images/varad/broach-detail.jpg"
                 alt="Contract broaching setup and detail view at Varad Engineering"
                 fill
-                quality={80}
+                quality={95}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />

@@ -16,6 +16,7 @@ export function Footer() {
                 alt="Varad Engineering - Broach Manufacturing Unit"
                 width={220}
                 height={68}
+                quality={95}
                 className="h-11 w-auto object-contain sm:h-12"
               />
             </Link>

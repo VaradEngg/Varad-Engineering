@@ -90,8 +90,8 @@ export default function SplineBroachesPage() {
               alt="Precision internal spline broach manufactured by Varad Engineering"
               fill
               priority
-              quality={85}
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              quality={95}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -207,7 +207,7 @@ export default function SplineBroachesPage() {
                 src="/images/varad/spline-grinding.jpg"
                 alt="MC3 Spline Grinding Machine in operation at Varad Engineering"
                 fill
-                quality={80}
+                quality={95}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
@@ -274,8 +274,8 @@ export default function SplineBroachesPage() {
                 src="/images/varad/round-broach.jpg"
                 alt="Precision round spline broach manufactured by Varad Engineering"
                 fill
-                quality={80}
-                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={95}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>
@@ -284,8 +284,8 @@ export default function SplineBroachesPage() {
                 src="/images/varad/spline-grinding.jpg"
                 alt="MC3 Spline Grinding Machine processing broaches at Varad Engineering"
                 fill
-                quality={80}
-                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={95}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>
@@ -294,8 +294,8 @@ export default function SplineBroachesPage() {
                 src="/images/varad/broach-detail.jpg"
                 alt="Close-up of broach cutting teeth and relief geometry"
                 fill
-                quality={80}
-                sizes="(max-width: 768px) 100vw, 33vw"
+                quality={95}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>

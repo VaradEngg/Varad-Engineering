@@ -241,8 +241,8 @@ export default async function ProductDetailPage({
               alt={detail.title}
               fill
               priority
-              quality={85}
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              quality={95}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -559,7 +559,8 @@ export default async function ProductDetailPage({
                       src={item.image}
                       alt={item.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={95}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover"
                     />
                   </div>

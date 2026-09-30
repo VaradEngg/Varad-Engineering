@@ -90,8 +90,8 @@ export default function SurfaceBroachesPage() {
               alt="Precision surface and flat broaches manufactured by Varad Engineering"
               fill
               priority
-              quality={85}
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              quality={95}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -207,7 +207,7 @@ export default function SurfaceBroachesPage() {
                 src="/images/varad/surface-grinding.jpg"
                 alt="ELB SCHLIFF surface grinding machine handling flat broaches at Varad Engineering"
                 fill
-                quality={80}
+                quality={95}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />

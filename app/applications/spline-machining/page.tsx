@@ -93,8 +93,8 @@ export default function SplineMachiningPage() {
               alt="Precision internal round spline broach manufactured by Varad Engineering"
               fill
               priority
-              quality={85}
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              quality={95}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -229,7 +229,7 @@ export default function SplineMachiningPage() {
                 src="/images/varad/spline-grinding.jpg"
                 alt="MC3 Spline Grinding machine processing broaches at Varad Engineering"
                 fill
-                quality={80}
+                quality={95}
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />

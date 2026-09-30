@@ -136,7 +136,7 @@ export default function ProductsPage() {
                     src={product.image}
                     alt={product.title}
                     fill
-                    quality={80}
+                    quality={95}
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />

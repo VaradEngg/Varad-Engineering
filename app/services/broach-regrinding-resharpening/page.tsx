@@ -95,8 +95,8 @@ export default function BroachRegrindingResharpeningPage() {
               alt="Arthur Klink broach resharpening machine at Varad Engineering workshop"
               fill
               priority
-              quality={85}
-              sizes="(max-width: 1024px) 100vw, 45vw"
+              quality={95}
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -239,7 +239,8 @@ export default function BroachRegrindingResharpeningPage() {
                   src="/images/varad/arthur-klink.jpg"
                   alt="Arthur Klink broach resharpening machine at Varad Engineering"
                   fill
-                  quality={80}
+                  quality={95}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
@@ -258,7 +259,8 @@ export default function BroachRegrindingResharpeningPage() {
                   src="/images/varad/surface-grinding.jpg"
                   alt="ELB SCHLIFF surface grinder at Varad Engineering"
                   fill
-                  quality={80}
+                  quality={95}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
@@ -297,7 +299,8 @@ export default function BroachRegrindingResharpeningPage() {
                   src="/images/varad/spline-grinding.jpg"
                   alt="MC3 Russian spline grinding machine at Varad Engineering"
                   fill
-                  quality={80}
+                  quality={95}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
