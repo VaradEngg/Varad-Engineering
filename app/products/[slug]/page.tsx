@@ -55,7 +55,7 @@ const productDetails: Record<
       "Special Profile Broaches",
     ],
     gallery: [
-      "/images/varad/round-broach.jpg",
+      "/images/varad/round-broach-v2.jpg",
       "/images/varad/spline-grinding.jpg",
       "/images/varad/cylindrical-grinding.jpg",
     ],
@@ -79,8 +79,8 @@ const productDetails: Record<
       "High-precision batch machining for automotive & mechanical OEMs",
     ],
     gallery: [
+      "/images/varad/contract-broaching-v2.jpg",
       "/images/varad/broaches.jpg",
-      "/images/varad/arthur-klink.jpg",
       "/images/varad/profile-projector.jpg",
     ],
     related: [

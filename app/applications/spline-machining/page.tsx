@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   description:
     "Explore spline broaching applications supported by Varad Engineering's combination and interspaced spline broaches from its Chakan, Pune manufacturing unit.",
   path: "/applications/spline-machining",
-  image: `https://${company.domain}/images/varad/round-broach.jpg`,
+  image: `https://${company.domain}/images/varad/round-broach-v2.jpg`,
 });
 
 const breadcrumbs = [
@@ -89,7 +89,7 @@ export default function SplineMachiningPage() {
 
           <div className="relative h-72 sm:h-[400px] overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
             <Image
-              src="/images/varad/round-broach.jpg"
+              src="/images/varad/round-broach-v2.jpg"
               alt="Precision internal round spline broach manufactured by Varad Engineering"
               fill
               priority

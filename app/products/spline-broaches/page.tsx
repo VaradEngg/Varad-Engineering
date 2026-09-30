@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
   description:
     "Varad Engineering manufactures spline broaches including combination and interspaced types, with round broach capability up to 200 mm diameter and 2000 mm length.",
   path: "/products/spline-broaches",
-  image: `https://${company.domain}/images/varad/round-broach.jpg`,
+  image: `https://${company.domain}/images/varad/round-broach-v2.jpg`,
 });
 
 const breadcrumbs = [
@@ -86,7 +86,7 @@ export default function SplineBroachesPage() {
 
           <div className="relative h-72 sm:h-[400px] overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
             <Image
-              src="/images/varad/round-broach.jpg"
+              src="/images/varad/round-broach-v2.jpg"
               alt="Precision internal spline broach manufactured by Varad Engineering"
               fill
               priority
@@ -271,7 +271,7 @@ export default function SplineBroachesPage() {
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             <div className="relative h-64 overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
               <Image
-                src="/images/varad/round-broach.jpg"
+                src="/images/varad/round-broach-v2.jpg"
                 alt="Precision round spline broach manufactured by Varad Engineering"
                 fill
                 quality={95}

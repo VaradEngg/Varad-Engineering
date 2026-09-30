@@ -34,8 +34,8 @@ export default function HomePage() {
           <div className="mt-6 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
             {productCategories.map((product) => (
               <article key={product.slug} className="group overflow-hidden border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <div className="relative h-44 sm:h-52 overflow-hidden bg-slate-100">
-                  <Image src={product.image} alt={product.title} fill quality={95} className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 360px" />
+                <div className="relative h-44 sm:h-52 overflow-hidden bg-white">
+                  <Image src={product.image} alt={product.title} fill quality={100} className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 640px" />
                 </div>
                 <div className="p-4 sm:p-6">
                   <h3 className="text-xl font-bold text-[#092d49] sm:text-2xl">{product.title}</h3>

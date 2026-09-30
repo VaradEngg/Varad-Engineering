@@ -30,14 +30,14 @@ const capabilities = [
   {
     title: "Round Broaches",
     text: "Spline, across-flat, double-D, hexagonal and special profile broaches up to 200 mm diameter and 2000 mm length.",
-    image: "/images/varad/round-broach.jpg",
+    image: "/images/varad/round-broach-v2.jpg",
     link: "/products/round-broaches",
     linkText: "View Round Broaches",
   },
   {
     title: "Contract Broaching",
     text: "Contract broaching services for precision automotive and mechanical manufacturing requirements.",
-    image: "/images/varad/broach-detail.jpg",
+    image: "/images/varad/contract-broaching-v2.jpg",
     link: "/products/contract-broaching",
     linkText: "View Contract Broaching",
   },
@@ -100,14 +100,14 @@ export default function ManufacturingPage() {
               className="overflow-hidden border border-slate-200 bg-white shadow-sm flex flex-col justify-between"
             >
               <div>
-                <div className="relative h-40 sm:h-48 bg-slate-100">
+                <div className="relative h-40 sm:h-48 bg-white">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    quality={95}
+                    quality={100}
                     className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 640px"
                   />
                 </div>
                 <div className="p-4 sm:p-6">

@@ -30,13 +30,13 @@ const productImages = [
     link: "/products/keyway-broaches",
   },
   {
-    src: "/images/varad/round-broach.jpg",
+    src: "/images/varad/round-broach-v2.jpg",
     title: "Round & Spline Broaches",
     alt: "Round spline broach manufactured by Varad Engineering",
     link: "/products/spline-broaches",
   },
   {
-    src: "/images/varad/broach-detail.jpg",
+    src: "/images/varad/contract-broaching-v2.jpg",
     title: "Broach Tooling Detail",
     alt: "Detail view of precision broach tooling at Varad Engineering",
     link: "/products/contract-broaching",

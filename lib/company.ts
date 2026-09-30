@@ -153,7 +153,7 @@ export const productCategories = [
     title: "Round Broaches",
     description:
       "Precision internal round broaches including combination & interspaced spline broaches, across flat, double-D, hexagonal, and special profile broaches up to 200 mm diameter and 2000 mm length.",
-    image: "/images/varad/round-broach.jpg",
+    image: "/images/varad/round-broach-v2.jpg",
     items: [
       "Spline Broaches (Combination & Interspaced)",
       "Across Flat Broaches",
@@ -168,7 +168,7 @@ export const productCategories = [
     title: "Contract Broaching",
     description:
       "Comprehensive contract broaching services backed by CNC gear testing (Hoffler ZP 260 & KAPP NILES KNM 2X), profile projection, and Grade A slip gauges.",
-    image: "/images/varad/broach-detail.jpg",
+    image: "/images/varad/contract-broaching-v2.jpg",
     items: [
       "Contract Broaching Work",
       "Customer-Specific Tooling & Aggregate Broaching",
