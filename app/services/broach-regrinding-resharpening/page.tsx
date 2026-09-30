@@ -277,7 +277,8 @@ export default function BroachRegrindingResharpeningPage() {
                   src="/images/varad/cylindrical-grinding.jpg"
                   alt="TOS cylindrical grinding machine at Varad Engineering"
                   fill
-                  quality={80}
+                  quality={90}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>

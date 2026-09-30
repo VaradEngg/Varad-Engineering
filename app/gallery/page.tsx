@@ -149,7 +149,7 @@ export default function GalleryPage() {
                         src={image.src}
                         alt={image.alt}
                         fill
-                        quality={80}
+                        quality={90}
                         className="object-cover transition duration-500 group-hover:scale-[1.02]"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />

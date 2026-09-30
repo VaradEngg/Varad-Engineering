@@ -588,6 +588,7 @@ export default async function ProductDetailPage({
                   src={image}
                   alt={`${detail.title} tooling view ${index + 1}`}
                   fill
+                  quality={90}
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
