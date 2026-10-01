@@ -93,20 +93,23 @@ async function buildAllLogosAndIcons() {
   console.log('✓ Saved public/images/varad/logo-mark-white.png (512x512)');
 
   // 3. Horizontal Lockup for Header (logo-horizontal.png)
-  // Combine Circular Badge + Brand Text
-  const textPng = await sharp(path.join(publicVarad, 'brand-text.png')).toBuffer();
-  const textMeta = await sharp(textPng).metadata();
-
   const badgeH = 240;
   const badgeRes = await sharp(circularBadge).resize(badgeH, badgeH).png().toBuffer();
 
-  const textH = 150;
-  const textRes = await sharp(textPng).resize({ height: textH }).png().toBuffer();
-  const textResMeta = await sharp(textRes).metadata();
+  const textW = 660;
+  const textH = 240;
+  const gap = 36;
+  const canvasW = badgeH + gap + textW;
+  const canvasH = 240;
 
-  const gap = 32;
-  const canvasW = badgeH + gap + textResMeta.width;
-  const canvasH = Math.max(badgeH, textResMeta.height);
+  // Header typography (deep navy for both VARAD and ENGINEERING for maximum readability)
+  const svgLight = Buffer.from(`
+    <svg width="${textW}" height="${textH}" viewBox="0 0 ${textW} ${textH}" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Arial Black', sans-serif" font-weight="900" font-size="86" fill="#092d49" letter-spacing="2">VARAD</text>
+      <text x="2" y="172" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Arial Black', sans-serif" font-weight="800" font-size="46" fill="#092d49" letter-spacing="8">ENGINEERING</text>
+    </svg>
+  `);
+  const textLightPng = await sharp(svgLight).png().toBuffer();
 
   const horizontalPng = await sharp({
     create: {
@@ -116,43 +119,37 @@ async function buildAllLogosAndIcons() {
       background: { r: 0, g: 0, b: 0, alpha: 0 }
     }
   }).composite([
-    { input: badgeRes, top: Math.round((canvasH - badgeH) / 2), left: 0 },
-    { input: textRes, top: Math.round((canvasH - textResMeta.height) / 2), left: badgeH + gap }
+    { input: badgeRes, top: 0, left: 0 },
+    { input: textLightPng, top: 0, left: badgeH + gap }
   ]).png().toBuffer();
 
   await sharp(horizontalPng).toFile(path.join(publicVarad, 'logo-horizontal.png'));
   console.log('✓ Saved public/images/varad/logo-horizontal.png', `${canvasW}x${canvasH}`);
 
   // 4. Horizontal Lockup for Dark Footer (logo-horizontal-white.png)
-  const rawH = await sharp(horizontalPng).raw().toBuffer({ resolveWithObject: true });
-  const outWhite = Buffer.alloc(rawH.data.length);
-  const w = rawH.info.width;
-  const h = rawH.info.height;
+  // Footer typography: Pure crisp white for both VARAD and bold visible ENGINEERING
+  const svgDark = Buffer.from(`
+    <svg width="${textW}" height="${textH}" viewBox="0 0 ${textW} ${textH}" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="105" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Arial Black', sans-serif" font-weight="900" font-size="86" fill="#ffffff" letter-spacing="2">VARAD</text>
+      <text x="2" y="172" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Arial Black', sans-serif" font-weight="800" font-size="46" fill="#ffffff" letter-spacing="8">ENGINEERING</text>
+    </svg>
+  `);
+  const textDarkPng = await sharp(svgDark).png().toBuffer();
 
-  for (let y = 0; y < h; y++) {
-    for (let x = 0; x < w; x++) {
-      const idx = (y * w + x) * 4;
-      const r = rawH.data[idx], g = rawH.data[idx+1], b = rawH.data[idx+2], a = rawH.data[idx+3];
-      if (a === 0) {
-        outWhite[idx] = 0; outWhite[idx+1] = 0; outWhite[idx+2] = 0; outWhite[idx+3] = 0;
-      } else if (x > badgeH) {
-        // Text area: convert dark navy to bright pure white for dark backgrounds
-        outWhite[idx] = 255;
-        outWhite[idx+1] = 255;
-        outWhite[idx+2] = 255;
-        outWhite[idx+3] = a;
-      } else {
-        // Badge area: retain rich cyan gradient
-        outWhite[idx] = r;
-        outWhite[idx+1] = g;
-        outWhite[idx+2] = b;
-        outWhite[idx+3] = a;
-      }
+  const horizontalWhitePng = await sharp({
+    create: {
+      width: canvasW,
+      height: canvasH,
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: 0 }
     }
-  }
+  }).composite([
+    { input: badgeRes, top: 0, left: 0 },
+    { input: textDarkPng, top: 0, left: badgeH + gap }
+  ]).png().toBuffer();
 
-  await sharp(outWhite, { raw: rawH.info }).png().toFile(path.join(publicVarad, 'logo-horizontal-white.png'));
-  console.log('✓ Saved public/images/varad/logo-horizontal-white.png');
+  await sharp(horizontalWhitePng).toFile(path.join(publicVarad, 'logo-horizontal-white.png'));
+  console.log('✓ Saved public/images/varad/logo-horizontal-white.png', `${canvasW}x${canvasH}`);
 
   // 5. Favicon and App Icons
   // app/icon.png (32x32) - use user provided 32x32 directly

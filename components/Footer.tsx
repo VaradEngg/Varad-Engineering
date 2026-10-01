@@ -31,8 +31,8 @@ export function Footer() {
               <Image
                 src="/images/varad/logo-horizontal-white.png"
                 alt="Varad Engineering - Broach Manufacturing Unit"
-                width={240}
-                height={90}
+                width={234}
+                height={60}
                 quality={95}
                 className="h-11 w-auto object-contain sm:h-12"
               />
