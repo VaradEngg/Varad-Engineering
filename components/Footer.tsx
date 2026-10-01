@@ -1,21 +1,38 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import { company, navItems } from "@/lib/company";
 
 export function Footer() {
+  const pathname = usePathname();
+
+  const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="border-t border-slate-200 bg-slate-950 text-slate-200">
       <div className="container-shell py-10 sm:py-14 lg:py-16">
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
           {/* Brand Info */}
           <div className="col-span-2 sm:col-span-1 lg:col-span-1">
-            <Link href="/" className="inline-block py-1" aria-label="Varad Engineering home">
+            <Link
+              href="/"
+              onClick={handleScrollToTop}
+              className="inline-block py-1 cursor-pointer transition-opacity hover:opacity-90 active:scale-95"
+              aria-label="Varad Engineering home - back to top"
+            >
               <Image
                 src="/images/varad/logo-horizontal-white.png"
                 alt="Varad Engineering - Broach Manufacturing Unit"
-                width={220}
-                height={68}
+                width={240}
+                height={90}
                 quality={95}
                 className="h-11 w-auto object-contain sm:h-12"
               />

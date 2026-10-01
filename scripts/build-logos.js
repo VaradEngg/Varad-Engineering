@@ -1,74 +1,112 @@
-const sharp = require('e:/projects-rohan/Varad Engineering workshop/Varad Engineering/node_modules/sharp');
+const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs');
 
-async function buildLogos() {
-  const publicVarad = 'e:/projects-rohan/Varad Engineering workshop/Varad Engineering/public/images/varad';
-  const src = path.join(publicVarad, 'logo.png');
+function createIco(pngBuffers, sizes) {
+  const count = pngBuffers.length;
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0); // reserved
+  header.writeUInt16LE(1, 2); // 1 = icon
+  header.writeUInt16LE(count, 4); // count
 
-  // Convert pure white background to alpha transparent
-  function whiteToAlpha(buffer, w, h) {
-    const out = Buffer.alloc(w * h * 4);
-    for (let i = 0; i < w * h; i++) {
-      const s = i * 3, d = i * 4;
-      const r = buffer[s], g = buffer[s+1], b = buffer[s+2];
-      const brightness = 0.299 * r + 0.587 * g + 0.114 * b;
-      if (brightness >= 253) {
-        out[d] = 0; out[d+1] = 0; out[d+2] = 0; out[d+3] = 0;
-      } else {
-        const alpha = Math.min(255, Math.round((255 - brightness) * (255 / (255 - 25))));
-        const aNorm = alpha / 255;
-        out[d] = Math.max(0, Math.min(255, Math.round((r - (1 - aNorm) * 255) / aNorm)));
-        out[d+1] = Math.max(0, Math.min(255, Math.round((g - (1 - aNorm) * 255) / aNorm)));
-        out[d+2] = Math.max(0, Math.min(255, Math.round((b - (1 - aNorm) * 255) / aNorm)));
-        out[d+3] = alpha;
-      }
-    }
-    return out;
+  let currentOffset = 6 + (16 * count);
+  const entries = [];
+  for (let i = 0; i < count; i++) {
+    const size = sizes[i];
+    const buf = pngBuffers[i];
+    const entry = Buffer.alloc(16);
+    entry.writeUInt8(size >= 256 ? 0 : size, 0);
+    entry.writeUInt8(size >= 256 ? 0 : size, 1);
+    entry.writeUInt8(0, 2);
+    entry.writeUInt8(0, 3);
+    entry.writeUInt16LE(1, 4);
+    entry.writeUInt16LE(32, 6);
+    entry.writeUInt32LE(buf.length, 8);
+    entry.writeUInt32LE(currentOffset, 12);
+    entries.push(entry);
+    currentOffset += buf.length;
   }
 
-  // 1. Emblem
-  const emblemRaw = await sharp(src)
-    .extract({ left: 360, top: 175, width: 255, height: 395 })
-    .removeAlpha()
-    .raw()
-    .toBuffer({ resolveWithObject: true });
+  return Buffer.concat([header, ...entries, ...pngBuffers]);
+}
 
-  const emblemTrans = whiteToAlpha(emblemRaw.data, emblemRaw.info.width, emblemRaw.info.height);
-  const emblemPng = await sharp(emblemTrans, { raw: { width: emblemRaw.info.width, height: emblemRaw.info.height, channels: 4 } })
+async function buildAllLogosAndIcons() {
+  const root = path.resolve(__dirname, '..');
+  const publicVarad = path.join(root, 'public', 'images', 'varad');
+  const appDir = path.join(root, 'app');
+  const publicDir = path.join(root, 'public');
+
+  const srcLogo = path.join(publicVarad, 'new-logo-src.jpg');
+  const srcFavicon = path.join(publicVarad, 'new-favicon-src.png');
+
+  console.log('Building assets from:');
+  console.log('  Logo:', srcLogo);
+  console.log('  Favicon:', srcFavicon);
+
+  // 1. Master logo.png (1024x1024 square with new logo centered)
+  const logoMeta = await sharp(srcLogo).metadata();
+  const maxDim = Math.max(logoMeta.width, logoMeta.height);
+  const padX = Math.round((maxDim - logoMeta.width) / 2);
+  const padY = Math.round((maxDim - logoMeta.height) / 2);
+
+  // Background color of logo is rgb(1, 127, 160)
+  const masterLogo = await sharp(srcLogo)
+    .extend({
+      top: padY,
+      bottom: maxDim - logoMeta.height - padY,
+      left: padX,
+      right: maxDim - logoMeta.width - padX,
+      background: { r: 1, g: 127, b: 160 }
+    })
+    .resize(1024, 1024)
     .png()
     .toBuffer();
 
-  await sharp(emblemPng).toFile(path.join(publicVarad, 'logo-mark.png'));
-  console.log('Saved logo-mark.png');
+  await sharp(masterLogo).toFile(path.join(publicVarad, 'logo.png'));
+  console.log('✓ Saved public/images/varad/logo.png (1024x1024)');
 
-  // 2. Text (VARAD and — ENGINEERING —)
-  const textRaw = await sharp(src)
-    .extract({ left: 130, top: 595, width: 765, height: 195 })
-    .removeAlpha()
-    .raw()
-    .toBuffer({ resolveWithObject: true });
+  // 2. High-res Circular Badge for emblem & icons
+  // Emblem center is at cx=502, cy=479 in 1024x980
+  const badgeSize = 880;
+  const squareCrop = await sharp(srcLogo)
+    .extract({
+      left: Math.round(502 - badgeSize / 2),
+      top: Math.round(479 - badgeSize / 2),
+      width: badgeSize,
+      height: badgeSize
+    })
+    .toBuffer();
 
-  const textTrans = whiteToAlpha(textRaw.data, textRaw.info.width, textRaw.info.height);
-  const textPng = await sharp(textTrans, { raw: { width: textRaw.info.width, height: textRaw.info.height, channels: 4 } })
+  const circleMask = Buffer.from(
+    `<svg width="${badgeSize}" height="${badgeSize}"><circle cx="${badgeSize/2}" cy="${badgeSize/2}" r="${badgeSize/2 - 2}" fill="#fff" /></svg>`
+  );
+
+  const circularBadge = await sharp(squareCrop)
+    .composite([{ input: circleMask, blend: 'dest-in' }])
     .png()
     .toBuffer();
 
-  // 3. Compose Horizontal Lockup
-  // Let emblem be height 240, text be height 150
-  const embH = 240;
-  const embRes = await sharp(emblemPng).resize({ height: embH }).png().toBuffer();
-  const embMeta = await sharp(embRes).metadata();
+  await sharp(circularBadge).resize(512, 512).toFile(path.join(publicVarad, 'logo-mark.png'));
+  console.log('✓ Saved public/images/varad/logo-mark.png (512x512)');
+
+  await sharp(circularBadge).resize(512, 512).toFile(path.join(publicVarad, 'logo-mark-white.png'));
+  console.log('✓ Saved public/images/varad/logo-mark-white.png (512x512)');
+
+  // 3. Horizontal Lockup for Header (logo-horizontal.png)
+  // Combine Circular Badge + Brand Text
+  const textPng = await sharp(path.join(publicVarad, 'brand-text.png')).toBuffer();
+  const textMeta = await sharp(textPng).metadata();
+
+  const badgeH = 240;
+  const badgeRes = await sharp(circularBadge).resize(badgeH, badgeH).png().toBuffer();
 
   const textH = 150;
   const textRes = await sharp(textPng).resize({ height: textH }).png().toBuffer();
-  const textMeta = await sharp(textRes).metadata();
+  const textResMeta = await sharp(textRes).metadata();
 
-  const gap = 36;
-  const canvasW = embMeta.width + gap + textMeta.width;
-  const canvasH = Math.max(embMeta.height, textMeta.height);
-  const embTop = Math.round((canvasH - embMeta.height) / 2);
-  const textTop = Math.round((canvasH - textMeta.height) / 2);
+  const gap = 32;
+  const canvasW = badgeH + gap + textResMeta.width;
+  const canvasH = Math.max(badgeH, textResMeta.height);
 
   const horizontalPng = await sharp({
     create: {
@@ -78,55 +116,71 @@ async function buildLogos() {
       background: { r: 0, g: 0, b: 0, alpha: 0 }
     }
   }).composite([
-    { input: embRes, top: embTop, left: 0 },
-    { input: textRes, top: textTop, left: embMeta.width + gap }
+    { input: badgeRes, top: Math.round((canvasH - badgeH) / 2), left: 0 },
+    { input: textRes, top: Math.round((canvasH - textResMeta.height) / 2), left: badgeH + gap }
   ]).png().toBuffer();
 
   await sharp(horizontalPng).toFile(path.join(publicVarad, 'logo-horizontal.png'));
-  console.log('Saved logo-horizontal.png', { width: canvasW, height: canvasH });
+  console.log('✓ Saved public/images/varad/logo-horizontal.png', `${canvasW}x${canvasH}`);
 
-  // 4. White/Light version for dark backgrounds
+  // 4. Horizontal Lockup for Dark Footer (logo-horizontal-white.png)
   const rawH = await sharp(horizontalPng).raw().toBuffer({ resolveWithObject: true });
   const outWhite = Buffer.alloc(rawH.data.length);
-  for (let i = 0; i < rawH.info.width * rawH.info.height; i++) {
-    const idx = i * 4;
-    const r = rawH.data[idx], g = rawH.data[idx+1], b = rawH.data[idx+2], a = rawH.data[idx+3];
-    if (a === 0) {
-      outWhite[idx] = 0; outWhite[idx+1] = 0; outWhite[idx+2] = 0; outWhite[idx+3] = 0;
-    } else if (r < 75 && g < 75 && b < 85) {
-      // Dark gear / brand text -> white
-      outWhite[idx] = 255; outWhite[idx+1] = 255; outWhite[idx+2] = 255; outWhite[idx+3] = a;
-    } else {
-      // Metallic broach -> bright silver
-      outWhite[idx] = Math.min(255, Math.round(r * 1.8 + 60));
-      outWhite[idx+1] = Math.min(255, Math.round(g * 1.8 + 60));
-      outWhite[idx+2] = Math.min(255, Math.round(b * 1.8 + 60));
-      outWhite[idx+3] = a;
+  const w = rawH.info.width;
+  const h = rawH.info.height;
+
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      const idx = (y * w + x) * 4;
+      const r = rawH.data[idx], g = rawH.data[idx+1], b = rawH.data[idx+2], a = rawH.data[idx+3];
+      if (a === 0) {
+        outWhite[idx] = 0; outWhite[idx+1] = 0; outWhite[idx+2] = 0; outWhite[idx+3] = 0;
+      } else if (x > badgeH) {
+        // Text area: convert dark navy to bright pure white for dark backgrounds
+        outWhite[idx] = 255;
+        outWhite[idx+1] = 255;
+        outWhite[idx+2] = 255;
+        outWhite[idx+3] = a;
+      } else {
+        // Badge area: retain rich cyan gradient
+        outWhite[idx] = r;
+        outWhite[idx+1] = g;
+        outWhite[idx+2] = b;
+        outWhite[idx+3] = a;
+      }
     }
   }
 
   await sharp(outWhite, { raw: rawH.info }).png().toFile(path.join(publicVarad, 'logo-horizontal-white.png'));
-  console.log('Saved logo-horizontal-white.png');
+  console.log('✓ Saved public/images/varad/logo-horizontal-white.png');
 
-  // 5. White emblem mark
-  const rawMark = await sharp(emblemPng).raw().toBuffer({ resolveWithObject: true });
-  const outMarkWhite = Buffer.alloc(rawMark.data.length);
-  for (let i = 0; i < rawMark.info.width * rawMark.info.height; i++) {
-    const idx = i * 4;
-    const r = rawMark.data[idx], g = rawMark.data[idx+1], b = rawMark.data[idx+2], a = rawMark.data[idx+3];
-    if (a === 0) {
-      outMarkWhite[idx] = 0; outMarkWhite[idx+1] = 0; outMarkWhite[idx+2] = 0; outMarkWhite[idx+3] = 0;
-    } else if (r < 75 && g < 75 && b < 85) {
-      outMarkWhite[idx] = 255; outMarkWhite[idx+1] = 255; outMarkWhite[idx+2] = 255; outMarkWhite[idx+3] = a;
-    } else {
-      outMarkWhite[idx] = Math.min(255, Math.round(r * 1.8 + 60));
-      outMarkWhite[idx+1] = Math.min(255, Math.round(g * 1.8 + 60));
-      outMarkWhite[idx+2] = Math.min(255, Math.round(b * 1.8 + 60));
-      outMarkWhite[idx+3] = a;
-    }
-  }
-  await sharp(outMarkWhite, { raw: rawMark.info }).png().toFile(path.join(publicVarad, 'logo-mark-white.png'));
-  console.log('Saved logo-mark-white.png');
+  // 5. Favicon and App Icons
+  // app/icon.png (32x32) - use user provided 32x32 directly
+  const fav32Buffer = fs.readFileSync(srcFavicon);
+  fs.writeFileSync(path.join(appDir, 'icon.png'), fav32Buffer);
+  console.log('✓ Saved app/icon.png (32x32 from attachment)');
+
+  // app/favicon.ico (multi-size: 16x16, 32x32, 48x48)
+  const ico16 = await sharp(srcFavicon).resize(16, 16).png().toBuffer();
+  const ico32 = fav32Buffer;
+  const ico48 = await sharp(circularBadge).resize(48, 48).png().toBuffer();
+  const icoData = createIco([ico16, ico32, ico48], [16, 32, 48]);
+  fs.writeFileSync(path.join(appDir, 'favicon.ico'), icoData);
+  console.log('✓ Saved app/favicon.ico (16, 32, 48 sizes)');
+
+  // app/apple-icon.png (180x180)
+  await sharp(circularBadge).resize(180, 180).png().toFile(path.join(appDir, 'apple-icon.png'));
+  console.log('✓ Saved app/apple-icon.png (180x180)');
+
+  // public/icon-192.png (192x192)
+  await sharp(circularBadge).resize(192, 192).png().toFile(path.join(publicDir, 'icon-192.png'));
+  console.log('✓ Saved public/icon-192.png (192x192)');
+
+  // public/icon-512.png (512x512)
+  await sharp(circularBadge).resize(512, 512).png().toFile(path.join(publicDir, 'icon-512.png'));
+  console.log('✓ Saved public/icon-512.png (512x512)');
+
+  console.log('\nAll logos and favicons successfully built and updated!');
 }
 
-buildLogos().catch(console.error);
+buildAllLogosAndIcons().catch(console.error);
